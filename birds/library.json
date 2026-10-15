@@ -1,0 +1,1192 @@
+[
+ {
+  "id": "rijks-RP-T-1914-17-250",
+  "name": "European Roller",
+  "latin": "Coracias garrulus",
+  "face": -1,
+  "w": 720,
+  "h": 468,
+  "foot": [
+   299,
+   432
+  ],
+  "perch": 0.0,
+  "file": "1.webp",
+  "cite": {
+   "title": "Coracius garrulus (European roller)",
+   "titleOriginal": "Coracius garrulus (Scharrelaar)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-250",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-250",
+   "persistentId": "https://id.rijksmuseum.nl/200475717",
+   "imageUrl": "https://iiif.micr.io/RdQGI/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "indigo",
+   "teal"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-255",
+  "name": "Capped Wheatear",
+  "latin": "Oenanthe pileata",
+  "face": -1,
+  "w": 662,
+  "h": 392,
+  "foot": [
+   244.0,
+   368.0
+  ],
+  "perch": 0.0,
+  "file": "5.webp",
+  "cite": {
+   "title": "Oenanthe pileata (Capped wheatear or Hoëveldskaapwagter in Afrikaans)",
+   "titleOriginal": "Oenanthe pileata (Aardtapuit or Hoëveldskaapwagter)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1778-11-13",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-255",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-255",
+   "persistentId": "https://id.rijksmuseum.nl/200475724",
+   "imageUrl": "https://iiif.micr.io/elqcZ/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "1778"
+  },
+  "foliage": [
+   "sage",
+   "autumn"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-256",
+  "name": "Southern Fiscal",
+  "latin": "Lanius collaris",
+  "face": -1,
+  "w": 720,
+  "h": 436,
+  "foot": [
+   240,
+   379
+  ],
+  "perch": 0.0,
+  "file": "6.webp",
+  "cite": {
+   "title": "Lanius collaris (Southern fiscal or Fiscal shrike)",
+   "titleOriginal": "Lanius collaris (Zuidelijke gekraagde klauwier)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-256",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-256",
+   "persistentId": "https://id.rijksmuseum.nl/200475725",
+   "imageUrl": "https://iiif.micr.io/tJlds/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "slate",
+   "sage"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-259",
+  "name": "Bokmakierie",
+  "latin": "Telophorus zeylonus",
+  "face": 1,
+  "w": 720,
+  "h": 532,
+  "foot": [
+   367.4,
+   491.7
+  ],
+  "perch": 0.0,
+  "file": "9.webp",
+  "cite": {
+   "title": "Telephorus zeylonus (Bokmakierie)",
+   "titleOriginal": "Telephorus zeylonus (Bokmakierieklauwier)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1778-12-30",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-259",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-259",
+   "persistentId": "https://id.rijksmuseum.nl/200475737",
+   "imageUrl": "https://iiif.micr.io/DJqeI/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "1778"
+  },
+  "foliage": [
+   "olive",
+   "sage"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-262",
+  "name": "Cape Rock Thrush",
+  "latin": "Monticola rupestris",
+  "face": -1,
+  "w": 616,
+  "h": 503,
+  "foot": [
+   209.0,
+   439.0
+  ],
+  "perch": 0.49,
+  "file": "11.webp",
+  "cite": {
+   "title": "Monticola rupestris (Cape rock thrush)",
+   "titleOriginal": "Monticola rupestris (Kaapse rotslijster)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-262",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-262",
+   "persistentId": "https://id.rijksmuseum.nl/200475740",
+   "imageUrl": "https://iiif.micr.io/aPeZe/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "autumn",
+   "indigo"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-266",
+  "name": "Cape Bulbul",
+  "latin": "Pycnonotus capensis",
+  "face": -1,
+  "w": 695,
+  "h": 601,
+  "foot": [
+   264.0,
+   551.0
+  ],
+  "perch": 0.0,
+  "file": "14.webp",
+  "cite": {
+   "title": "Pycnonotus capensis (Cape bulbul)",
+   "titleOriginal": "Pycnonotus capensis (Kaapse buulbuul)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-266",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-266",
+   "persistentId": "https://id.rijksmuseum.nl/200475744",
+   "imageUrl": "https://iiif.micr.io/ISUPe/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "sage",
+   "slate"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-267",
+  "name": "Cape Robin-Chat",
+  "latin": "Cossypha caffra",
+  "face": -1,
+  "w": 720,
+  "h": 451,
+  "foot": [
+   223.6,
+   398.8
+  ],
+  "perch": 0.0,
+  "file": "15.webp",
+  "cite": {
+   "title": "Cossypha caffra (Cape robin-chat)",
+   "titleOriginal": "Cossypha caffra (Kaapse lawaaimaker)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-267",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-267",
+   "persistentId": "https://id.rijksmuseum.nl/200475745",
+   "imageUrl": "https://iiif.micr.io/yuWZf/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "autumn",
+   "ochre"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-270",
+  "name": "Red-winged Starling",
+  "latin": "Onychognathus morio",
+  "face": 1,
+  "w": 672,
+  "h": 577,
+  "foot": [
+   394.0,
+   489.0
+  ],
+  "perch": 0.0,
+  "file": "17.webp",
+  "cite": {
+   "title": "Onychognathus morio (Red-winged starling)",
+   "titleOriginal": "Spreuw",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-270",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-270",
+   "persistentId": "https://id.rijksmuseum.nl/200475748",
+   "imageUrl": "https://iiif.micr.io/dLyFi/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "autumn",
+   "plum"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-274",
+  "name": "Amethyst Sunbird",
+  "latin": "Chalcomitra amethystina",
+  "face": 1,
+  "w": 504,
+  "h": 322,
+  "foot": [
+   234.0,
+   294.0
+  ],
+  "perch": 0.0,
+  "file": "20.webp",
+  "cite": {
+   "title": "Nectarinia amethystina (Amethyst sunbird)",
+   "titleOriginal": "Sucrie améthiste",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-274",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-274",
+   "persistentId": "https://id.rijksmuseum.nl/200475756",
+   "imageUrl": "https://iiif.micr.io/vfzkw/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "plum",
+   "rose"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-275",
+  "name": "Malachite Sunbird",
+  "latin": "Nectarinia famosa",
+  "face": -1,
+  "w": 720,
+  "h": 307,
+  "foot": [
+   242.1,
+   234.2
+  ],
+  "perch": 0.0,
+  "file": "21.webp",
+  "cite": {
+   "title": "Nectarinia famosa (Malachite sunbird)",
+   "titleOriginal": "Sucrie verd[...] mâle",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-275",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-275",
+   "persistentId": "https://id.rijksmuseum.nl/200475757",
+   "imageUrl": "https://iiif.micr.io/QElQz/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "teal",
+   "sage"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-278",
+  "name": "African Hoopoe",
+  "latin": "Upupa africana",
+  "face": 1,
+  "w": 698,
+  "h": 584,
+  "foot": [
+   234.0,
+   526.0
+  ],
+  "perch": -0.2,
+  "file": "23.webp",
+  "cite": {
+   "title": "Upupa africana (Hoopoe)",
+   "titleOriginal": "Upupa africana (Hop)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-278",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-278",
+   "persistentId": "https://id.rijksmuseum.nl/200475778",
+   "imageUrl": "https://iiif.micr.io/CAqDz/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "ochre",
+   "autumn"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-279",
+  "name": "Yellow Bishop",
+  "latin": "Euplectes capensis",
+  "face": 1,
+  "w": 659,
+  "h": 428,
+  "foot": [
+   316.0,
+   409.0
+  ],
+  "perch": 0.0,
+  "file": "24.webp",
+  "cite": {
+   "title": "Euplectes capensis (Yellow bishop)",
+   "titleOriginal": "Euplectes capensis (Fluweelwidavink)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-279",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-279",
+   "persistentId": "https://id.rijksmuseum.nl/200475779",
+   "imageUrl": "https://iiif.micr.io/UpwuT/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "olive",
+   "ochre"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-283",
+  "name": "Southern Red Bishop",
+  "latin": "Euplectes orix",
+  "face": -1,
+  "w": 569,
+  "h": 435,
+  "foot": [
+   224.0,
+   412.0
+  ],
+  "perch": 0.0,
+  "file": "28.webp",
+  "cite": {
+   "title": "Euplectes orix (Southern red bishop)",
+   "titleOriginal": "Euplectes orix (Grenadierwever of Rooivink in Afrikaans)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-283",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-283",
+   "persistentId": "https://id.rijksmuseum.nl/200475794",
+   "imageUrl": "https://iiif.micr.io/NijPH/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "autumn",
+   "crimson"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-286",
+  "name": "White-backed Mousebird",
+  "latin": "Colius colius",
+  "face": -1,
+  "w": 720,
+  "h": 352,
+  "foot": [
+   124.9,
+   297.9
+  ],
+  "perch": 0.0,
+  "file": "31.webp",
+  "cite": {
+   "title": "Colius colius ? (White-backed mousebird)",
+   "titleOriginal": "Witkruismuisvogel (Colius colius); het mannetje",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-286",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-286",
+   "persistentId": "https://id.rijksmuseum.nl/200475821",
+   "imageUrl": "https://iiif.micr.io/mIhzd/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "slate",
+   "rose"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-288",
+  "name": "Knysna Turaco",
+  "latin": "Tauraco corythaix",
+  "face": 1,
+  "w": 689,
+  "h": 582,
+  "foot": [
+   354.0,
+   436.0
+  ],
+  "perch": 0.0,
+  "file": "33.webp",
+  "cite": {
+   "title": "Tauraco corythaix (Knysna turaco or Knysna lourie)",
+   "titleOriginal": "Le touralou",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-288",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-288",
+   "persistentId": "https://id.rijksmuseum.nl/200475835",
+   "imageUrl": "https://iiif.micr.io/jQaOU/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "sage",
+   "crimson"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-289",
+  "name": "Rosy-faced Lovebird",
+  "latin": "Agapornis roseicollis",
+  "face": -1,
+  "w": 543,
+  "h": 340,
+  "foot": [
+   246.0,
+   290.0
+  ],
+  "perch": 0.25,
+  "file": "34.webp",
+  "cite": {
+   "title": "Agapornis roseicollis (Rosy-faced lovebird)",
+   "titleOriginal": "Perzikkopdwergpapegaai (Agapornis roseicollis); het mannetje",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-289",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-289",
+   "persistentId": "https://id.rijksmuseum.nl/200475836",
+   "imageUrl": "https://iiif.micr.io/WWCBf/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "sage",
+   "rose"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-291",
+  "name": "Jacobin Cuckoo",
+  "latin": "Clamator jacobinus",
+  "face": -1,
+  "w": 720,
+  "h": 542,
+  "foot": [
+   169.1,
+   368.9
+  ],
+  "perch": 0.0,
+  "file": "36.webp",
+  "cite": {
+   "title": "Clamator jacobinus (Jacobin cuckoo)",
+   "titleOriginal": "Clamator jacobinus (Jacobijnkoekoek)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-291",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-291",
+   "persistentId": "https://id.rijksmuseum.nl/200475845",
+   "imageUrl": "https://iiif.micr.io/MBMrD/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1777–1786"
+  },
+  "foliage": [
+   "slate",
+   "sage"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1897-A-3200",
+  "name": "European Robin",
+  "latin": "Erithacus rubecula",
+  "face": 1,
+  "w": 653,
+  "h": 494,
+  "foot": [
+   464.0,
+   456.0
+  ],
+  "perch": 0.0,
+  "file": "52.webp",
+  "cite": {
+   "title": "Roodborstje",
+   "titleOriginal": "Roodborstje",
+   "artist": "Johannes Bronkhorst",
+   "date": "1658 - 1726",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1897-A-3200",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1897-A-3200",
+   "persistentId": "https://id.rijksmuseum.nl/200120134",
+   "imageUrl": "https://iiif.micr.io/ToQjI/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1675–1726"
+  },
+  "foliage": [
+   "autumn",
+   "crimson"
+  ]
+ },
+ {
+  "id": "rijks-NG-1985-7-1-40",
+  "name": "Bee-eater",
+  "latin": "Merops sp.",
+  "face": -1,
+  "w": 720,
+  "h": 705,
+  "foot": [
+   285.5,
+   332.5
+  ],
+  "perch": 0.82,
+  "file": "54.webp",
+  "cite": {
+   "title": "Kleine vogel op tak",
+   "titleOriginal": "Kleine vogel op tak",
+   "artist": "Jan Brandes",
+   "date": "1785-03-29",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "NG-1985-7-1-40",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/NG-1985-7-1-40",
+   "persistentId": "https://id.rijksmuseum.nl/200224809",
+   "imageUrl": "https://iiif.micr.io/XzDLI/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "1785"
+  },
+  "foliage": [
+   "olive",
+   "teal"
+  ]
+ },
+ {
+  "id": "rijks-NG-1985-7-1-82",
+  "name": "Song Thrush",
+  "latin": "Turdus philomelos",
+  "face": 1,
+  "w": 586,
+  "h": 720,
+  "foot": [
+   240,
+   650
+  ],
+  "perch": 0.0,
+  "file": "62.webp",
+  "cite": {
+   "title": "Zanglijster (Turdus philomelos)",
+   "titleOriginal": "Zanglijster (Turdus philomelos)",
+   "artist": "Jan Brandes",
+   "date": "1787-11-26 - 1808-08-31",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "NG-1985-7-1-82",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/NG-1985-7-1-82",
+   "persistentId": "https://id.rijksmuseum.nl/200224932",
+   "imageUrl": "https://iiif.micr.io/xFhdv/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), stray perch fragments masked, white point lifted, resized to max 720px",
+   "dateDisplay": "c. 1787–1808"
+  },
+  "foliage": [
+   "autumn",
+   "sage"
+  ]
+ },
+ {
+  "id": "rijks-RP-T-1914-17-281",
+  "name": "Ground Woodpecker",
+  "latin": "Geocolaptes olivaceus",
+  "face": 1,
+  "w": 760,
+  "h": 395,
+  "foot": [
+   366,
+   304
+  ],
+  "perch": 0.0,
+  "file": "a26.webp",
+  "foliage": [
+   "autumn",
+   "olive"
+  ],
+  "cite": {
+   "title": "Geocolaptes olivaceus (Ground woodpecker)",
+   "titleOriginal": "Le pic roc, mâle",
+   "artist": "Robert Jacob Gordon",
+   "date": "1778-11-14",
+   "dateDisplay": "1778",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-281",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-281",
+   "persistentId": "https://id.rijksmuseum.nl/200475792",
+   "imageUrl": "https://iiif.micr.io/UsJpP/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-282",
+  "name": "Pin-tailed Whydah",
+  "latin": "Vidua macroura",
+  "face": 1,
+  "w": 760,
+  "h": 315,
+  "foot": [
+   507,
+   253
+  ],
+  "perch": 0.0,
+  "file": "a27.webp",
+  "foliage": [
+   "sage",
+   "slate"
+  ],
+  "cite": {
+   "title": "Vidua macroura (Pin-tailed whydah) and locust",
+   "titleOriginal": "Vidua macroura (Dominikanerwida) en sprinkhaan",
+   "artist": "Robert Jacob Gordon",
+   "date": "1778-10",
+   "dateDisplay": "1778",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-282",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-282",
+   "persistentId": "https://id.rijksmuseum.nl/200475793",
+   "imageUrl": "https://iiif.micr.io/FYtTS/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-285",
+  "name": "Speckled Mousebird",
+  "latin": "Colius striatus",
+  "face": 1,
+  "w": 760,
+  "h": 437,
+  "foot": [
+   479,
+   324
+  ],
+  "perch": 0.0,
+  "file": "a30.webp",
+  "foliage": [
+   "slate",
+   "sage"
+  ],
+  "cite": {
+   "title": "Colius striatus ? (Speckled mousebird)",
+   "titleOriginal": "Colius striatus ? (Bruine muisvogel)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "dateDisplay": "c. 1777–1786",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-285",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-285",
+   "persistentId": "https://id.rijksmuseum.nl/200475820",
+   "imageUrl": "https://iiif.micr.io/AiRXX/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-287",
+  "name": "Narina Trogon",
+  "latin": "Apaloderma narina",
+  "face": 1,
+  "w": 760,
+  "h": 415,
+  "foot": [
+   183,
+   254
+  ],
+  "perch": 0.0,
+  "file": "a32.webp",
+  "foliage": [
+   "crimson",
+   "sage"
+  ],
+  "cite": {
+   "title": "Apaloderma narina (Narina trogon)",
+   "titleOriginal": "Bosloerie (Apaloderma narina); het mannetje",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "dateDisplay": "c. 1777–1786",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-287",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-287",
+   "persistentId": "https://id.rijksmuseum.nl/200475822",
+   "imageUrl": "https://iiif.micr.io/BIiyL/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-295",
+  "name": "Namaqua Dove",
+  "latin": "Oena capensis",
+  "face": 1,
+  "w": 760,
+  "h": 396,
+  "foot": [
+   197,
+   324
+  ],
+  "perch": 0.0,
+  "file": "a38.webp",
+  "foliage": [
+   "slate",
+   "rose"
+  ],
+  "cite": {
+   "title": "Oena capensis (Namaqua dove)",
+   "titleOriginal": "Oena capensis (Maskerduif of Namakwaduif in Afrikaans)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1778-11-07",
+   "dateDisplay": "1778",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-295",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-295",
+   "persistentId": "https://id.rijksmuseum.nl/200475853",
+   "imageUrl": "https://iiif.micr.io/EFqRE/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-248",
+  "name": "White-necked Raven",
+  "latin": "Corvus albicollis",
+  "face": 1,
+  "w": 760,
+  "h": 430,
+  "foot": [
+   282,
+   366
+  ],
+  "perch": 0.0,
+  "file": "b0.webp",
+  "foliage": [
+   "slate",
+   "sage"
+  ],
+  "cite": {
+   "title": "Corvus albicollis (White-necked raven)",
+   "titleOriginal": "Corbeau du Cap au col blanc",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "dateDisplay": "c. 1777–1786",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-248",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-248",
+   "persistentId": "https://id.rijksmuseum.nl/200475715",
+   "imageUrl": "https://iiif.micr.io/dPIBs/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-261",
+  "name": "Greater Honeyguide",
+  "latin": "Indicator indicator",
+  "face": 1,
+  "w": 760,
+  "h": 428,
+  "foot": [
+   419.1,
+   369.1
+  ],
+  "perch": 0.0,
+  "file": "b2.webp",
+  "foliage": [
+   "olive",
+   "autumn"
+  ],
+  "cite": {
+   "title": "Indicator indicator (Greater honeyguide)",
+   "titleOriginal": "Indicator indicator (Grote honingspeurder)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "dateDisplay": "c. 1777–1786",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-261",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-261",
+   "persistentId": "https://id.rijksmuseum.nl/200475739",
+   "imageUrl": "https://iiif.micr.io/uQTpv/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-269",
+  "name": "Acacia Pied Barbet",
+  "latin": "Tricholaema leucomelas",
+  "face": 1,
+  "w": 760,
+  "h": 505,
+  "foot": [
+   374.0,
+   472.4
+  ],
+  "perch": 0.0,
+  "file": "b3.webp",
+  "foliage": [
+   "olive",
+   "sage"
+  ],
+  "cite": {
+   "title": "Tricholaema leucomelas (Acacia pied barbet)",
+   "titleOriginal": "Tricholaema leucomelas (Kaapse baardvogel)",
+   "artist": "Robert Jacob Gordon",
+   "date": "1777-10 - 1786-03",
+   "dateDisplay": "c. 1777–1786",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-269",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-269",
+   "persistentId": "https://id.rijksmuseum.nl/200475747",
+   "imageUrl": "https://iiif.micr.io/OEqaD/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-1914-17-293",
+  "name": "Palm Cockatoo",
+  "latin": "Probosciger aterrimus",
+  "face": 1,
+  "w": 448,
+  "h": 760,
+  "foot": [
+   152.1,
+   558.1
+  ],
+  "perch": 0.0,
+  "file": "b6.webp",
+  "foliage": [
+   "slate",
+   "indigo"
+  ],
+  "cite": {
+   "title": "Palm cockatoo",
+   "titleOriginal": "Zwarte kaketoe",
+   "artist": "attributed to Robert Jacob Gordon",
+   "date": "in of na ca. 1780",
+   "dateDisplay": "c. 1780",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-1914-17-293",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-293",
+   "persistentId": "https://id.rijksmuseum.nl/200475851",
+   "imageUrl": "https://iiif.micr.io/faLey/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-3-83",
+  "name": "Eurasian Jay",
+  "latin": "Garrulus glandarius",
+  "face": 1,
+  "w": 760,
+  "h": 687,
+  "foot": [
+   323.0,
+   647.5
+  ],
+  "perch": 0.0,
+  "file": "b97.webp",
+  "foliage": [
+   "autumn",
+   "indigo"
+  ],
+  "cite": {
+   "title": "Weijten Gaeij. / Graculus Garrulus. / Geai.",
+   "titleOriginal": "Weijten Gaeij. / Graculus Garrulus. / Geai.",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-3-83",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-3-83",
+   "persistentId": "https://id.rijksmuseum.nl/200691932",
+   "imageUrl": "https://iiif.micr.io/RFTxC/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-3-88",
+  "name": "Bohemian Waxwing",
+  "latin": "Bombycilla garrulus",
+  "face": 1,
+  "w": 702,
+  "h": 535,
+  "foot": [
+   296.0,
+   501.0
+  ],
+  "perch": 0.0,
+  "file": "b102.webp",
+  "foliage": [
+   "autumn",
+   "crimson"
+  ],
+  "cite": {
+   "title": "Pestvogel (Bombycilla garrulus)",
+   "titleOriginal": "Pestvogel (Bombycilla garrulus)",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-3-88",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-3-88",
+   "persistentId": "https://id.rijksmuseum.nl/200691937",
+   "imageUrl": "https://iiif.micr.io/ILsVg/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-4-9",
+  "name": "European Goldfinch",
+  "latin": "Carduelis carduelis",
+  "face": 1,
+  "w": 444,
+  "h": 246,
+  "foot": [
+   231.0,
+   228.0
+  ],
+  "perch": 0.0,
+  "file": "b110.webp",
+  "foliage": [
+   "olive",
+   "crimson"
+  ],
+  "cite": {
+   "title": "Putter of distelvink (Carduelis carduelis)",
+   "titleOriginal": "Putter of distelvink (Carduelis carduelis)",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-4-9",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-4-9",
+   "persistentId": "https://id.rijksmuseum.nl/200691945",
+   "imageUrl": "https://iiif.micr.io/knUKE/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-4-17",
+  "name": "Chaffinch",
+  "latin": "Fringilla sp.",
+  "face": 1,
+  "w": 415,
+  "h": 255,
+  "foot": [
+   169.0,
+   240.0
+  ],
+  "perch": 0.0,
+  "file": "b118.webp",
+  "foliage": [
+   "autumn",
+   "sage"
+  ],
+  "cite": {
+   "title": "Vink (Fringilla)",
+   "titleOriginal": "Vink (Fringilla)",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-4-17",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-4-17",
+   "persistentId": "https://id.rijksmuseum.nl/200691953",
+   "imageUrl": "https://iiif.micr.io/iRtVE/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-4-49",
+  "name": "Rose-ringed Parakeet",
+  "latin": "Psittacula sp.",
+  "face": 1,
+  "w": 354,
+  "h": 357,
+  "foot": [
+   201.0,
+   341.0
+  ],
+  "perch": 0.0,
+  "file": "b154.webp",
+  "foliage": [
+   "crimson",
+   "sage"
+  ],
+  "cite": {
+   "title": "Red-headed Lovebird",
+   "titleOriginal": "Oostindische Mussche. / Psittacus Minimus. / Moineau de guinée. perruche à tete rouge.",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-4-49",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-4-49",
+   "persistentId": "https://id.rijksmuseum.nl/200691995",
+   "imageUrl": "https://iiif.micr.io/FGdvj/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ },
+ {
+  "id": "rijks-RP-T-BR-2017-1-5-19",
+  "name": "Spangled Cotinga",
+  "latin": "Cotinga cayana",
+  "face": 1,
+  "w": 735,
+  "h": 523,
+  "foot": [
+   326.0,
+   501.0
+  ],
+  "perch": 0.0,
+  "file": "b181.webp",
+  "foliage": [
+   "indigo",
+   "plum"
+  ],
+  "cite": {
+   "title": "Spangled Cotinga (Cotinga cayana)",
+   "titleOriginal": "Halsbandcotinga (Cotinga cayana)",
+   "artist": "Anselmus Boëtius de Boodt",
+   "date": "1596 - 1610",
+   "dateDisplay": "c. 1596–1610",
+   "medium": "Watercolour on paper",
+   "institution": "Rijksmuseum, Amsterdam",
+   "objectNumber": "RP-T-BR-2017-1-5-19",
+   "objectUrl": "https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-5-19",
+   "persistentId": "https://id.rijksmuseum.nl/200694704",
+   "imageUrl": "https://iiif.micr.io/ONNzb/full/max/0/default.jpg",
+   "license": "Public Domain Mark 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "processing": "Background removed (rembg isnet-general-use), painted perch masked, white point lifted, resized to max 760px"
+  }
+ }
+]
