@@ -14,7 +14,7 @@ Processing: background removed with rembg (isnet-general-use), white point lifte
 | 5 | Cape Bulbul (*Pycnonotus capensis*) | Robert Jacob Gordon | Pycnonotus capensis (Cape bulbul) | c. 1777–1786 | RP-T-1914-17-266 | https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-266 |
 | 6 | Cape Robin-Chat (*Cossypha caffra*) | Robert Jacob Gordon | Cossypha caffra (Cape robin-chat) | c. 1777–1786 | RP-T-1914-17-267 | https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-267 |
 | 7 | Cape Rock Thrush (*Monticola rupestris*) | Robert Jacob Gordon | Monticola rupestris (Cape rock thrush) | c. 1777–1786 | RP-T-1914-17-262 | https://www.rijksmuseum.nl/en/collection/RP-T-1914-17-262 |
-| 8 | Common Blackbird (*Turdus merula*) | Anselmus Boëtius de Boodt (eigenhandig gesigneerd) | Common Blackbird (Turdus merula) | c. 1596–1610 | RP-T-BR-2017-1-3-85 | https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-3-85 |
+| 8 | Common Blackbird (*Turdus merula*) | Anselmus Boëtius de Boodt  | Common Blackbird (Turdus merula) | c. 1596–1610 | RP-T-BR-2017-1-3-85 | https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-3-85 |
 | 9 | Common Kingfisher (*Alcedo atthis*) | Anselmus Boëtius de Boodt | Common kingfisher (Alcedo atthis) | c. 1596–1610 | RP-T-BR-2017-1-5-17 | https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-5-17 |
 | 10 | Common Nightingale (*Luscinia megarhynchos*) | Anselmus Boëtius de Boodt | Nachtegael. / philomela, luscinia / Rossignol. | c. 1596–1610 | RP-T-BR-2017-1-4-26 | https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-4-26 |
 | 11 | Common Starling (*Sturnus vulgaris*) | Anselmus Boëtius de Boodt | Spreeuw (Sturnus vulgaris) | c. 1596–1610 | RP-T-BR-2017-1-3-72 | https://www.rijksmuseum.nl/en/collection/RP-T-BR-2017-1-3-72 |
