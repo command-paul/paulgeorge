@@ -24,6 +24,7 @@
   --accent:#a9c387; --accent-ink:#182012; --mat:#fbfaf6; --shadow:rgba(0,0,0,.45); --b-name:#e8a46a; --b-wash:rgba(224,138,60,.08); color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
 a{color:var(--accent)}
 .wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;
@@ -85,6 +86,9 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .seedrow{display:flex;gap:8px}
 .seedrow input{flex:1;min-width:0}
 .rule{border:0;border-top:1px solid var(--line);margin:2px 0}
+.sect{margin:0 0 -6px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.shuffle{align-self:flex-start}
+.hint.small{font-size:13px;line-height:1.45}
 .library{margin-top:40px;border-top:1px solid var(--line);padding-top:24px}
 .library header{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;margin-bottom:18px}
 .library header p{margin:0;color:var(--muted);font-size:15px;max-width:70ch}
@@ -111,7 +115,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
     <div class="credit-text">
       <p class="credit-kicker">After the hand-painted cards of</p>
       <p class="credit-name">Aninya</p>
-      <p class="credit-handle"><a href="https://www.instagram.com/_aninya/" target="_blank" rel="noopener" aria-label="Aninya on Instagram, @_aninya"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>_aninya</a> · the redstart in autumn creeper and the white-eye in sage vine</p>
+      <p class="credit-handle"><a href="https://www.instagram.com/aninyag/" target="_blank" rel="noopener" aria-label="Aninya on Instagram, @aninyag"><svg class="ig" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>aninyag</a> · the redstart in autumn creeper and the white-eye in sage vine</p>
     </div>
     <svg class="sprig flip" viewBox="0 0 120 40" aria-hidden="true"><path d="M4 30 C 30 26, 52 10, 80 14 S 112 26, 116 20" fill="none" stroke="var(--b-stem)" stroke-width="1.4" stroke-linecap="round"/>
 <g fill="var(--b-leaf)" fill-opacity=".72"><ellipse cx="20" cy="22" rx="7" ry="3.2" transform="rotate(-35 20 22)"/><ellipse cx="30" cy="31" rx="6.5" ry="3" transform="rotate(30 30 31)"/><ellipse cx="44" cy="13" rx="7" ry="3.2" transform="rotate(-50 44 13)"/><ellipse cx="54" cy="24" rx="6.5" ry="3" transform="rotate(25 54 24)"/><ellipse cx="72" cy="6" rx="6.5" ry="3" transform="rotate(-20 72 6)"/><ellipse cx="86" cy="22" rx="6.5" ry="3" transform="rotate(40 86 22)"/><ellipse cx="100" cy="13" rx="6" ry="2.8" transform="rotate(-30 100 13)"/></g>
@@ -173,8 +177,20 @@ input[type=range]{width:100%;accent-color:var(--accent)}
             <option value="square">Square</option>
             <option value="circle">Roundel</option>
             <option value="arch">Arch</option>
+            <option value="rim">Patterned rim</option>
+            <option value="inlay">Mughal inlay border</option>
+            <option value="tile">Seamless tile</option>
           </select>
         </div>
+      </div>
+      <label class="check" id="repeatRow" hidden><input type="checkbox" id="tileRepeat" checked> <span>Show the tile repeated 2&times;2</span></label>
+      <div class="group">
+        <label for="paint">Paint</label>
+        <select id="paint">
+          <option value="wet">Soft wet edges</option>
+          <option value="classic">Crisp washes</option>
+          <option value="granular">Granulating pigment</option>
+        </select>
       </div>
       <div class="group">
         <label for="caption">Caption on the picture</label>
@@ -185,7 +201,59 @@ input[type=range]{width:100%;accent-color:var(--accent)}
           <option value="mount">Museum mount</option>
         </select>
       </div>
-      <label class="check"><input type="checkbox" id="mirror" checked> <span>Mirror the vine, like a tree-of-life panel</span></label>
+      <hr class="rule">
+      <p class="sect">The pattern</p>
+      <div class="group">
+        <label for="plant">Plant</label>
+        <select id="plant">
+          <option value="creeper">Creeper</option>
+          <option value="glory">Morning glory</option>
+          <option value="wisteria">Wisteria</option>
+          <option value="ivy">Ivy</option>
+          <option value="grape">Grapevine</option>
+          <option value="arabesque">Persian arabesque</option>
+          <option value="kalamkari">Kalamkari tree of life</option>
+        </select>
+        <p class="hint small" id="plantHint" hidden></p>
+      </div>
+      <div class="row">
+        <div class="group">
+          <label for="layout">Growth</label>
+          <select id="layout">
+            <option value="tree">Tree of life</option>
+            <option value="wreath">Wreath</option>
+            <option value="climb">Climbing sides</option>
+            <option value="corners">Corner sprays</option>
+            <option value="cascade">Cascade</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="symmetry">Symmetry</label>
+          <select id="symmetry">
+            <option value="mirror">Mirror</option>
+            <option value="none">None</option>
+            <option value="quad">Four-way</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="group">
+          <label for="arrange">Leaf pattern</label>
+          <select id="arrange">
+            <option value="alternate">Alternate</option>
+            <option value="opposite">Paired</option>
+            <option value="cluster">Clusters</option>
+          </select>
+        </div>
+        <div class="group">
+          <label for="stems">Stems</label>
+          <select id="stems">
+            <option value="1">Regular</option>
+            <option value="0.65">Fine</option>
+            <option value="1.5">Bold</option>
+          </select>
+        </div>
+      </div>
       <hr class="rule">
       <div class="group">
         <label for="density">Density <output id="densityOut"></output></label>
@@ -199,6 +267,15 @@ input[type=range]{width:100%;accent-color:var(--accent)}
         <label for="curl">Tendril curl <output id="curlOut"></output></label>
         <input type="range" id="curl" min="0" max="200" step="10" value="100">
       </div>
+      <div class="group">
+        <label for="wild">Wildness <output id="wildOut"></output></label>
+        <input type="range" id="wild" min="0" max="100" step="5" value="35">
+      </div>
+      <div class="group">
+        <label for="bloom">Blossoms <output id="bloomOut"></output></label>
+        <input type="range" id="bloom" min="0" max="10" step="1" value="3">
+      </div>
+      <button class="ghost shuffle" id="shuffleBtn" type="button">Shuffle the vine settings</button>
       <div class="group">
         <label for="birdSize">Bird size <output id="birdSizeOut"></output></label>
         <input type="range" id="birdSize" min="70" max="140" step="5" value="100">
@@ -251,7 +328,8 @@ function resampleOpen(poly,n){const L=[0];for(let i=1;i<poly.length;i++)L.push(L
 
 /* ---------------- foliage palettes ---------------- */
 const PALETTES={
-  sage:{name:"Sage myrtle",leaves:["#8e9d6c","#7b8c5c","#a3b187","#71815a","#b2be98"],stem:"#7e8d63",accent:"#6b7b51",accentP:0,style:["teardrop","round","teardrop"]},
+  cobalt:{name:"Blue-and-white porcelain",leaves:["#2f4f8f","#3d5fa0","#5b7bb8","#284684","#7f97c8"],stem:"#2a447c",accent:"#2f4f8f",accentP:.03,style:["almond","teardrop","mixed"]},
+  sage:{name:"Sage myrtle",leaves:["#8e9d6c","#7b8c5c","#a3b187","#71815a","#b2be98"],stem:"#7e8d63",accent:"#cf9a8a",accentP:0,style:["teardrop","round","teardrop"]},
   autumn:{name:"Autumn creeper",leaves:["#f09a40","#ea8a34","#f5b062","#f7c486","#eda24a","#e07a30","#d26a2c","#f2aa52"],stem:"#cf9a44",accent:"#b8442a",accentP:0,style:["autumn"]},
   olive:{name:"Olive and gold",leaves:["#b2a33f","#9b8d31","#c7b967","#877a3a","#a8aa5c"],stem:"#8b7c3a",accent:"#cf743a",accentP:.03,style:["teardrop","almond","mixed"]},
   indigo:{name:"Indigo vine",leaves:["#56739e","#435f8c","#7f98bd","#3c5682","#a2b4cf"],stem:"#5a6c8c",accent:"#d79a52",accentP:.03,style:["teardrop","almond","willow"]},
@@ -269,6 +347,11 @@ for(const b of LIB){b.img=new Image();b.img.decoding="async";b.ready=new Promise
 
 /* ---------------- borders ---------------- */
 function makeFrame(kind){
+  if(kind==="tile")return{kind,tile:true,m:0,cx:W/2,cy:W/2,fs:W*.84,bottom:W,inside:()=>true};
+  if(kind==="inlay"){const m=W*.04,bw=W*.105,inset=m+bw+W*.012,cx=W/2,cy=H/2;
+    return{kind,m,cx,cy,fs:W-2*inset,bottom:H-inset,inlay:{x0:m,y0:m,x1:W-m,y1:H-m,bw},inside:(x,y)=>x>inset&&x<W-inset&&y>inset&&y<H-inset};}
+  if(kind==="rim"){const m=W*.055,cx=W/2,cy=H/2,Rr=(W-2*m)/2,ri=Rr*.71;
+    return{kind,m,cx,cy,fs:2*ri,bottom:cy+ri,rim:{R:Rr,ri},inside:(x,y)=>(x-cx)*(x-cx)+(y-cy)*(y-cy)<ri*ri};}
   if(kind==="card"){const m=W*.05,cx=W/2,cy=H/2,fs=W-2*m;return{kind,m,cx,cy,fs,bottom:H-m,inside:(x,y)=>x>m&&x<W-m&&y>m&&y<H-m};}
   const m=W*.085,cx=W/2,cy=H/2,fs=W-2*m;
   if(kind==="circle"){const r=fs/2;return{kind,m,cx,cy,fs,bottom:cy+r,inside:(x,y)=>(x-cx)*(x-cx)+(y-cy)*(y-cy)<r*r};}
@@ -284,18 +367,39 @@ function compose(cfg,seed){
   const R=mulberry32((seed*2654435761)>>>0^0x5bd1e995);
   const rr=(a,b)=>a+(b-a)*R(),pick=a=>a[(R()*a.length)|0];
   const bird=cfg.species==="random"?pick(LIB):LIB.find(b=>b.id===cfg.species)||LIB[0];
-  const palKey=cfg.foliage==="match"?pick(bird.foliage):cfg.foliage,pal=PALETTES[palKey];
-  const style=cfg.leaf==="auto"?pick(pal.style):cfg.leaf;
-  const frame=makeFrame(cfg.frame),fs=frame.fs;
-  const L=46*U*cfg.leafSize;                         // leaf length
+  const palKey=cfg.foliage==="match"||!PALETTES[cfg.foliage]?pick(bird.foliage):cfg.foliage,pal=PALETTES[palKey];
+  const PLANT=cfg.plant||"creeper";
+  // growth rules per plant: leaf shape and size, spacing, tendrils, flowers, tips, special structure
+  const PL=({creeper:{},
+    glory:{shape:"heart",size:1.12,spacing:1.3,tendril:.17,flower:"trumpet",fP:.055,wob:1.7},
+    wisteria:{shape:"pinnate",size:1.2,spacing:1.75,flower:"raceme",fP:.13},
+    ivy:{shape:"ivy",size:.92,spacing:.92,flower:"ivyberry",fP:.012},
+    grape:{shape:"grape",size:1.32,spacing:1.55,tendril:.24,flower:"grapes",fP:.05},
+    arabesque:{shape:"rumi",size:.8,spacing:2.2,spiral:true,tip:"palmette",flower:"rosette",fP:.02},
+    kalamkari:{shape:"paisley",size:1.2,spacing:1.45,tip:"rosette",tipP:.5,flower:"rosette",fP:.035,mound:true,trunkW:2.7,layout:"tree",sym:"mirror"}})[PLANT]||{};
+  const style=PL.shape||(cfg.leaf==="auto"?pick(pal.style):cfg.leaf);
+  const fullFrame=makeFrame(cfg.frame),TILE=!!fullFrame.tile;
+  const frame=fullFrame;
+  const fs=frame.fs;
+  const L=46*U*cfg.leafSize*(PL.size||1);           // leaf length
   const D=L*(2.2-.08*cfg.density);                  // target gap between neighbouring stems
   const STEP=3*U,CELL=4*U,GW=Math.ceil(W/CELL),GH=Math.ceil(H/CELL),N=GW*GH;
   const curlR=.2*D/Math.max(.35,cfg.curl);
-  const mirror=cfg.mirror;
+  const SYM=PL.sym||cfg.symmetry||(cfg.mirror===false?"none":"mirror"),LAYOUT=TILE?"tile":(PL.layout||cfg.layout||"tree"),ARR=PL.shape&&PL.shape!=="paisley"&&PLANT!=="arabesque"?"alternate":(cfg.arrange||"alternate");
+  const WILD=(cfg.wild??.35)/.35,BLOOM=cfg.bloom??3;
+  const mirror=SYM!=="none";
+  const accentP=BLOOM===0?0:Math.max(pal.accentP,BLOOM>3?.02:0)*(BLOOM/3);
+  const jr=(c,h)=>c+(R()*2-1)*h*WILD;   // value around c, spread scaled by wildness
+  // symmetry transforms (applied to points, angles)
+  const TX=[{p:q=>q,a:a=>a,s:1}];
+  if(SYM!=="none")TX.push({p:q=>[2*frame.cx-q[0],q[1]],a:a=>Math.PI-a,s:-1});
+  if(SYM==="quad"){TX.push({p:q=>[q[0],2*frame.cy-q[1]],a:a=>-a,s:-1});TX.push({p:q=>[2*frame.cx-q[0],2*frame.cy-q[1]],a:a=>a+Math.PI,s:1});}
+  const inRegion=(x,y)=>SYM==="none"||(x<frame.cx&&(SYM!=="quad"||y<frame.cy));
+  const edgePt=(dx,dy,back)=>{const l=Math.hypot(dx,dy);dx/=l;dy/=l;let t=0;while(frame.inside(frame.cx+dx*(t+4*U),frame.cy+dy*(t+4*U))&&t<W*2)t+=4*U;t-=back??4*U;return[frame.cx+dx*t,frame.cy+dy*t];};
 
   // ---- bird placement: its painted feet land on the perch point P
   const flip=R()<.5;
-  let s=fs*.5*cfg.birdSize/Math.sqrt(bird.w*bird.h);
+  let s=fs*(TILE?.4:.5)*cfg.birdSize/Math.sqrt(bird.w*bird.h);
   if(Math.max(bird.w,bird.h)*s>fs*.72)s=fs*.72/Math.max(bird.w,bird.h);
   const bw=bird.w*s,bh=bird.h*s;
   const ox=frame.cx+rr(-.04,.04)*fs-bw/2,oy=frame.cy+rr(-.06,.01)*fs-bh/2;
@@ -313,40 +417,43 @@ function compose(cfg,seed){
   function birdMask(both){
     const c=document.createElement("canvas");c.width=GW;c.height=GH;const x=c.getContext("2d");
     const halo=3*U/CELL;
-    const draw=(mir)=>{for(let a=0;a<12;a++){const dx=Math.cos(a/12*TAU)*halo,dy=Math.sin(a/12*TAU)*halo;
-      x.setTransform(1,0,0,1,0,0);if(mir){x.translate(GW,0);x.scale(-1,1);}
+    const draw=(mir,miry)=>{for(let a=0;a<12;a++){const dx=Math.cos(a/12*TAU)*halo,dy=Math.sin(a/12*TAU)*halo;
+      x.setTransform(1,0,0,1,0,0);if(mir){x.translate(W/CELL,0);x.scale(-1,1);}if(miry){x.translate(0,H/CELL);x.scale(1,-1);}
       x.translate(ox/CELL+dx,oy/CELL+dy);if(flip){x.translate(bw/CELL,0);x.scale(-1,1);}
       x.drawImage(bird.img,0,0,bw/CELL,bh/CELL);}};
-    draw(false);if(both)draw(true);
+    draw(false,false);if(both){draw(true,false);if(SYM==="quad"){draw(false,true);draw(true,true);}}
     const d=x.getImageData(0,0,GW,GH).data,m=new Uint8Array(N);for(let k=0;k<N;k++)m[k]=d[k*4+3]>50?1:0;return m;
   }
   let half=false,isBird,field,leafOwn;
-  const insideF=(x,y)=>frame.inside(x,y)&&(!half||x<frame.cx);
+  const insideF=(x,y)=>frame.inside(x,y)&&(!half||inRegion(x,y));
   function buildField(useHalf,both){
     half=useHalf;isBird=birdMask(both);
     const outside=new Uint8Array(N),cen=new Uint8Array(N);
-    for(let k=0;k<N;k++){const[x,y]=cellC(k);outside[k]=frame.inside(x,y)?0:1;if(useHalf&&x>=frame.cx)cen[k]=1;}
+    for(let k=0;k<N;k++){const[x,y]=cellC(k);outside[k]=frame.inside(x,y)?0:1;if(useHalf&&!inRegion(x,y))cen[k]=1;}
     const dE=chamfer(outside),dB=chamfer(isBird),dC=useHalf?chamfer(cen):null;
     field=new Float32Array(N);
     for(let k=0;k<N;k++){let v=outside[k]||isBird[k]?0:Math.min(dE[k]*1.75,dB[k]*1.2);if(dC)v=Math.min(v,dC[k]*1.0);field[k]=v;}
     leafOwn=new Int32Array(N).fill(-1);
   }
-  const F=(x,y)=>{const i=Math.floor(x/CELL),j=Math.floor(y/CELL);return(i<0||j<0||i>=GW||j>=GH)?0:field[j*GW+i];};
+  const wi=i=>((i%GW)+GW)%GW,wj=j=>((j%GH)+GH)%GH;
+  const cellK=(x,y)=>{let i=Math.floor(x/CELL),j=Math.floor(y/CELL);if(TILE){i=wi(i);j=wj(j);}else if(i<0||j<0||i>=GW||j>=GH)return -1;return j*GW+i;};
+  const F=(x,y)=>{const k=cellK(x,y);return k<0?0:field[k];};
   const SR=1.3*D,SRc=Math.ceil(SR/CELL);
   function stamp(p){const ci=Math.floor(p[0]/CELL),cj=Math.floor(p[1]/CELL);
-    for(let j=Math.max(0,cj-SRc);j<=Math.min(GH-1,cj+SRc);j++)for(let i=Math.max(0,ci-SRc);i<=Math.min(GW-1,ci+SRc);i++){
-      const dx=(i+.5)*CELL-p[0],dy=(j+.5)*CELL-p[1],d=Math.sqrt(dx*dx+dy*dy);if(d<SR){const k=j*GW+i;if(d<field[k])field[k]=d;}}}
+    const j0=TILE?cj-SRc:Math.max(0,cj-SRc),j1=TILE?cj+SRc:Math.min(GH-1,cj+SRc),i0=TILE?ci-SRc:Math.max(0,ci-SRc),i1=TILE?ci+SRc:Math.min(GW-1,ci+SRc);
+    for(let j=j0;j<=j1;j++)for(let i=i0;i<=i1;i++){
+      const dx=(i+.5)*CELL-p[0],dy=(j+.5)*CELL-p[1],d=Math.sqrt(dx*dx+dy*dy);if(d<SR){const k=TILE?wj(j)*GW+wi(i):j*GW+i;if(d<field[k])field[k]=d;}}}
 
   const tendrils=[];const queue=[];
   function grow(T){
     const pts=[[T.x,T.y]];let x=T.x,y=T.y,ang=T.ang,k=0,trav=0,curl=false,curlTurn=0,curlSign=1,curlIdx=-1;
     const lag=Math.ceil(.8*D/STEP);let stamped=0;const cands=[];
-    let nextBr=T.firstBr??rr(.8,1.3)*D,side=R()<.5?1:-1;const ph=rr(0,TAU),wob=rr(.15,.4);
-    const kmax=1/(.55*curlR+.12*D);const wantsCurl=R()<Math.min(.95,.38*cfg.curl);
+    let nextBr=T.firstBr??rr(.8,1.3)*D,side=R()<.5?1:-1;const ph=rr(0,TAU),wob=clamp(jr(.27,.13)*(PL.wob||1),0,.95),ph2=rr(0,TAU);
+    const kmax=1/(.55*curlR+.12*D);const wantsCurl=PL.spiral?true:R()<Math.min(.95,.38*cfg.curl);
     for(let st=0;st<4000;st++){
       const grace=trav<T.grace;
       if(!curl&&trav>T.maxLen){if(!wantsCurl){T.endLeaf=true;break;}curl=true;curlSign=k>=0?1:-1;curlIdx=pts.length;}
-      let tgt=T.baseK*(1+wob*Math.sin(trav/(1.6*D)+ph));
+      let tgt=T.baseK*(1+wob*Math.sin(trav/(1.6*D)+ph))*(PL.spiral?1+Math.min(2.2,Math.pow(trav/(2.6*D),1.6)):1)+(WILD>1?(WILD-1)*.25*Math.sin(trav/(.9*D)+ph2)/(2.4*D):0);
       if(!grace){
         const look=.8*D,c=Math.cos(ang),sn=Math.sin(ang);
         const fC=F(x+c*look,y+sn*look),fP=F(x+Math.cos(ang+.6)*look,y+Math.sin(ang+.6)*look),fM=F(x+Math.cos(ang-.6)*look,y+Math.sin(ang-.6)*look);
@@ -371,14 +478,13 @@ function compose(cfg,seed){
   const tang=(pts,i)=>{const a=pts[Math.max(0,i-2)],b=pts[Math.min(pts.length-1,i+2)];return Math.atan2(b[1]-a[1],b[0]-a[0]);};
   function childLen(d){return d<=1?rr(.45,.85)*fs:d===2?rr(2.5,5.5)*D:d===3?rr(1.6,3.6)*D:rr(1.1,2.3)*D;}
   function enqueueKids(T){
-    for(const c of T.cands){const p=T.pts[c.i],ang=tang(T.pts,c.i)+c.side*rr(.45,.72),d=T.depth+1;
+    for(const c of T.cands){const p=T.pts[c.i],ang=tang(T.pts,c.i)+c.side*clamp(jr(.585,.135),.3,1.2),d=T.depth+1;
       queue.push({x:p[0],y:p[1],ang,depth:d,parent:T.id,baseK:c.side*rr(.5,1.3)/(d<=1?.32*fs:1.7*D),maxLen:childLen(d),grace:.85*D});}
   }
   function leafFits(tid,pts,tipIdx){
     for(let i=0;i<pts.length;i++){const p=pts[i];
       if(!insideF(p[0],p[1]))return false;
-      const ci=Math.floor(p[0]/CELL),cj=Math.floor(p[1]/CELL);if(ci<0||cj<0||ci>=GW||cj>=GH)return false;
-      const k=cj*GW+ci;if(isBird[k])return false;
+      const k=cellK(p[0],p[1]);if(k<0)return false;if(isBird[k])return false;
       const o=leafOwn[k];if(o!==-1&&o!==tid)return false;
       if(i===tipIdx&&field[k]<.28*L)return false;}
     return true;
@@ -386,33 +492,46 @@ function compose(cfg,seed){
   function leafFoot(Lf){const ca=Math.cos(Lf.ang),sa=Math.sin(Lf.ang),st=Lf.len*.1,w=Lf.len*Lf.wr,pts=[];
     for(const t of[.4,.65,.9,1.04])pts.push([Lf.x+ca*(st+t*Lf.len),Lf.y+sa*(st+t*Lf.len)]);
     const mx=Lf.x+ca*(st+.45*Lf.len),my=Lf.y+sa*(st+.45*Lf.len);pts.push([mx-sa*w,my+ca*w],[mx+sa*w,my-ca*w]);return pts;}
-  const markLeaf=(tid,pts)=>{for(const p of pts){const ci=Math.floor(p[0]/CELL),cj=Math.floor(p[1]/CELL);if(ci>=0&&cj>=0&&ci<GW&&cj<GH){const k=cj*GW+ci;if(leafOwn[k]===-1)leafOwn[k]=tid;}}};
-  const WR={teardrop:.33,almond:.25,round:.4,willow:.13,oak:.42};
+  const markLeaf=(tid,pts)=>{for(const p of pts){const k=cellK(p[0],p[1]);if(k>=0&&leafOwn[k]===-1)leafOwn[k]=tid;}};
+  const WR={teardrop:.33,almond:.25,round:.4,willow:.13,oak:.42,heart:.5,ivy:.62,grape:.68,pinnate:.42,rumi:.24,paisley:.4,palmette:.62,
+    trumpet:.42,raceme:.24,grapes:.34,rosette:.48,ivyberry:.3,tendril:.25,peony:.5,flower:.45,berry:.4};
   const shapePick=()=>{if(style==="mixed"){const r=R();return r<.45?"teardrop":r<.75?"almond":"round";}if(style==="autumn"){const r=R();return r<.55?"teardrop":"almond";}return style;};
   function placeLeaves(T){
     const pts=T.pts,n=pts.length;T.leaves=[];if(n<4)return;
-    const sp=L*.42*(1.18-.03*cfg.density);let next=(T.depth===0?.3:rr(.35,.6))*L,acc=0,side=R()<.5?1:-1;
-    for(let i=1;i<n-1;i++){acc+=STEP;if(acc<next)continue;next=acc+sp*rr(.7,1.35);
+    const spMul=ARR==="opposite"?1.75:ARR==="cluster"?2.1:1;
+    const sp=L*.42*(1.18-.03*cfg.density)*spMul;let next=(T.depth===0?.3:rr(.35,.6))*L,acc=0,side=R()<.5?1:-1;
+    for(let i=1;i<n-1;i++){acc+=STEP;if(acc<next)continue;next=acc+sp*clamp(jr(1.02,.32),.55,1.8);
       const ta=tang(pts,i),inCurl=i>=T.curlIdx,tEnd=i/(n-1);
-      let len=L*rr(.72,1.2)*Math.pow(.96,T.depth)*(inCurl?rr(.42,.6):1-.3*sm(.75,1,tEnd));
-      const shape=(style==="autumn"&&R()<.07&&!inCurl)?"oak":shapePick();
-      for(let a=0;a<2;a++){
-        const Lf={x:pts[i][0],y:pts[i][1],ang:ta+side*rr(.45,.95),len,shape,wr:WR[shape]*rr(.88,1.12),bend:side*rr(-.1,.3),asym:rr(-.14,.14),tid:T.id};
-        if(R()<pal.accentP&&!inCurl)Lf.shape=R()<.6?"flower":"berry";
-        const fp=leafFoot(Lf);
-        if(leafFits(T.id,fp,3)){markLeaf(T.id,fp);T.leaves.push(Lf);break;}
-        len*=.68;if(len<L*.3)break;}
+      const base=L*clamp(jr(.96,.24),.5,1.5)*Math.pow(.96,T.depth)*(inCurl?rr(.42,.6):1-.3*sm(.75,1,tEnd));
+      // which leaves sprout at this node: [side, angle offset, size]
+      const node=ARR==="opposite"&&!inCurl?[[1,0,1],[-1,0,1]]:ARR==="cluster"&&!inCurl?[[side,-.32,.9],[side,.22,1],[side,.62,.78]]:[[side,0,1]];
+      for(const[sd,off,sz]of node){
+        let len=base*sz;const shape=(style==="autumn"&&R()<.07&&!inCurl)?"oak":shapePick();
+        for(let a=0;a<2;a++){
+          const spread=ARR==="opposite"?jr(.82,.18):jr(.7,.25);
+          const Lf={x:pts[i][0],y:pts[i][1],ang:ta+sd*(clamp(spread,.25,1.4)+off),len,shape,wr:WR[shape]*rr(.88,1.12),bend:sd*rr(-.1,.3),asym:rr(-.14,.14),tid:T.id};
+          if(PL.flower){if(!inCurl&&BLOOM>0&&R()<PL.fP*BLOOM/3){Lf.shape=PL.flower;Lf.wr=WR[PL.flower];
+              const fl={trumpet:1.05,raceme:2.3,grapes:1.15,rosette:1.05,ivyberry:.55}[PL.flower]||1;Lf.len=len=L*fl*rr(.9,1.1);
+              if(PL.flower==="raceme"||PL.flower==="grapes")Lf.ang=Math.PI/2+rr(-.18,.18);}}
+          else if(palKey==="cobalt"){if(R()<.035+accentP&&!inCurl&&T.depth>=1){Lf.shape="peony";Lf.len=len=L*rr(1.1,1.5);}}
+          else if(R()<accentP&&!inCurl)Lf.shape=R()<.6?"flower":"berry";
+          const fp=leafFoot(Lf);
+          if(leafFits(T.id,fp,3)){markLeaf(T.id,fp);T.leaves.push(Lf);break;}
+          len*=.68;if(len<L*.3)break;}}
+      if(PL.tendril&&!inCurl&&R()<PL.tendril){const Lf={x:pts[i][0],y:pts[i][1],ang:ta-side*rr(.5,.9),len:L*rr(.55,.8),shape:"tendril",wr:.25,bend:0,asym:0,tid:T.id,dir:R()<.5?1:-1};
+        const fp=leafFoot(Lf);if(leafFits(T.id,fp,3)){markLeaf(T.id,fp);T.leaves.push(Lf);}}
       side=-side;}
-    if(T.endLeaf&&n>4){const ta=tang(pts,n-1),p=pts[n-1];
-      for(let a=0;a<3;a++){const shape=style==="autumn"&&R()<.55?"oak":shapePick();
-        const Lf={x:p[0],y:p[1],ang:ta+rr(-.25,.25),len:L*rr(.85,1.1)*(1-.2*a),shape,wr:WR[shape]*rr(.9,1.1),bend:rr(-.15,.15),asym:rr(-.1,.1),tid:T.id,tip:true};
+    if((T.endLeaf||PL.tip)&&n>4){const ta=tang(pts,n-1),p=pts[n-1];
+      for(let a=0;a<3;a++){const useTip=PL.tip&&R()<(PL.tipP??1),shape=useTip?PL.tip:style==="autumn"&&R()<.55?"oak":shapePick();
+        if(!useTip&&!T.endLeaf)break;
+        const Lf={x:p[0],y:p[1],ang:ta+rr(-.25,.25),len:L*rr(.85,1.1)*(1-.2*a)*(shape==="rosette"?1.15:1),shape,wr:WR[shape]*rr(.9,1.1),bend:rr(-.15,.15),asym:rr(-.1,.1),tid:T.id,tip:true};
         const fp=leafFoot(Lf);if(leafFits(T.id,fp,3)){markLeaf(T.id,fp);T.leaves.push(Lf);break;}}}
   }
   function processQueue(){
     while(queue.length){const q=queue.shift();
       const c=Math.cos(q.ang),sn=Math.sin(q.ang),px=q.x+c*1.3*D,py=q.y+sn*1.3*D;
       if(!q.force&&(!insideF(px,py)||F(px,py)<.5*D))continue;
-      const T={id:tendrils.length,...q};grow(T);
+      const T={id:tendrils.length,...q};if(PL.trunkW&&T.depth===1)T.wmul=1.5;grow(T);
       if(T.pts.length<5)continue;
       tendrils.push(T);placeLeaves(T);enqueueKids(T);}
   }
@@ -438,41 +557,89 @@ function compose(cfg,seed){
     }
   }
 
-  // ---- trunk: from the foot of the border up to the bird's feet
+  let trunk;
+  let mound=null;
+  {
+  // ---- structure: a perch stem to the bird's feet, then the layout's main stems
   buildField(mirror,mirror);
-  const Bp=[frame.cx+rr(-.02,.02)*fs,frame.bottom-2*U];
+  const bezier=(A,dA,B,dB,f1,f2)=>{const dist=Math.hypot(B[0]-A[0],B[1]-A[1]);const C1=[A[0]+dA[0]*f1*dist,A[1]+dA[1]*f1*dist],C2=[B[0]-dB[0]*f2*dist,B[1]-dB[1]*f2*dist];
+    const raw=[];for(let i=0;i<=240;i++){const t=i/240,u=1-t;raw.push([u*u*u*A[0]+3*u*u*t*C1[0]+3*u*t*t*C2[0]+t*t*t*B[0],u*u*u*A[1]+3*u*u*t*C1[1]+3*u*t*t*C2[1]+t*t*t*B[1]]);}
+    let tl=0;for(let i=1;i<raw.length;i++)tl+=Math.hypot(raw[i][0]-raw[i-1][0],raw[i][1]-raw[i-1][1]);return resampleOpen(raw,Math.max(8,Math.round(tl/STEP)));};
+  // where the perch stem starts
+  let Bp,dB0;
+  if(TILE){Bp=[P[0]+rr(-.12,.12)*W,P[1]+rr(.26,.34)*W];dB0=norm([rr(-.3,.3),-1]);}
+  else if(LAYOUT==="cascade"){Bp=edgePt(rr(-.06,.06),-1);dB0=[0,1];}
+  else if(LAYOUT==="climb"&&SYM==="none"){const sx=R()<.5?-1:1;Bp=edgePt(sx*.62,1);dB0=norm([-sx*.35,-1]);}
+  else{Bp=edgePt(rr(-.04,.04),1,2*U);dB0=[0,-1];}
   let tv=[pd[0],pd[1]];const toP=[P[0]-Bp[0],P[1]-Bp[1]];
   if(tv[0]*toP[0]+tv[1]*toP[1]<0)tv=[-tv[0],-tv[1]];
-  const dist=Math.hypot(toP[0],toP[1]);
-  const C1=[Bp[0],Bp[1]-.45*dist],C2=[P[0]-tv[0]*.38*dist,P[1]-tv[1]*.38*dist];
-  const raw=[];for(let i=0;i<=240;i++){const t=i/240,u=1-t;raw.push([u*u*u*Bp[0]+3*u*u*t*C1[0]+3*u*t*t*C2[0]+t*t*t*P[0],u*u*u*Bp[1]+3*u*u*t*C1[1]+3*u*t*t*C2[1]+t*t*t*P[1]]);}
-  let tl=0;for(let i=1;i<raw.length;i++)tl+=Math.hypot(raw[i][0]-raw[i-1][0],raw[i][1]-raw[i-1][1]);
-  const trunk={id:0,depth:0,fixed:true,pts:resampleOpen(raw,Math.max(8,Math.round(tl/STEP)))};trunk.curlIdx=trunk.pts.length;trunk.leaves=[];
+  trunk={id:0,depth:0,fixed:true,pts:bezier(Bp,dB0,P,tv,.45,.38)};trunk.curlIdx=trunk.pts.length;trunk.leaves=[];
+  if(PL.trunkW)trunk.wmul=PL.trunkW;
+  if(PL.mound&&!TILE){mound={x:Bp[0],y:Bp[1],w:.46*fs,h:.13*fs};for(let t=-1;t<=1.0001;t+=.05){const x=mound.x+t*mound.w/2,y=mound.y-mound.h*(1-t*t)*.9;stamp([x,y]);}}
   tendrils.push(trunk);
-  // side shoots from the trunk (left only when mirrored)
-  let nb=rr(.7,1.1)*D,acc=0,side=R()<.5?1:-1;
-  for(let i=1;i<trunk.pts.length-2;i++){acc+=STEP;if(acc<nb)continue;
-    const p=trunk.pts[i],ta=tang(trunk.pts,i);const ci=Math.floor(p[0]/CELL),cj=Math.floor(p[1]/CELL);
-    if(isBird[cj*GW+ci]){continue;}
-    let sd=side;side=-side;if(mirror)sd=Math.cos(ta+.6)<Math.cos(ta-.6)?1:-1;
-    queue.push({x:p[0],y:p[1],ang:ta+sd*rr(.5,.75),depth:1,parent:0,baseK:sd*rr(.6,1.2)/(.32*fs),maxLen:childLen(1),grace:.7*D});
-    nb=acc+rr(1.2,1.7)*D;}
-  // the two great scrolls at the foot
-  const sa=rr(.55,.85);
-  queue.push({x:Bp[0],y:Bp[1],ang:-Math.PI/2-sa,depth:1,parent:0,baseK:-rr(.8,1.3)/(.3*fs),maxLen:rr(.7,1)*fs,grace:.5*D,force:true});
-  if(!mirror)queue.push({x:Bp[0],y:Bp[1],ang:-Math.PI/2+sa,depth:1,parent:0,baseK:rr(.8,1.3)/(.3*fs),maxLen:rr(.7,1)*fs,grace:.5*D,force:true});
-  trunk.pts.forEach(stamp);
+  for(const t of TX)trunk.pts.forEach(q=>stamp(t.p(q)));
+  // shoots along a fixed stem: alternate sides, keep only those that head into this panel's region
+  function shootsFrom(T,first,gapLo,gapHi,lenFn){let nb=first,acc=0,side=R()<.5?1:-1;
+    for(let i=1;i<T.pts.length-2;i++){acc+=STEP;if(acc<nb)continue;
+      const p=T.pts[i],ta=tang(T.pts,i);const kb=cellK(p[0],p[1]);
+      if(kb>=0&&isBird[kb])continue;
+      const ok=sd=>{const a=ta+sd*.62;return insideF(p[0]+Math.cos(a)*1.3*D,p[1]+Math.sin(a)*1.3*D);};
+      let sd=side;if(!ok(sd))sd=-sd;side=-side;if(!ok(sd))continue;
+      queue.push({x:p[0],y:p[1],ang:ta+sd*clamp(jr(.62,.13),.35,1.1),depth:1,parent:T.id,baseK:sd*rr(.6,1.2)/(.32*fs),maxLen:lenFn(),grace:.7*D});
+      nb=acc+rr(gapLo,gapHi)*D;}}
+  const seed=(x,y,ang,k,len,o)=>{if(!insideF(x,y))return;queue.push(Object.assign({x,y,ang,depth:1,parent:0,baseK:k,maxLen:len,grace:.5*D,force:true},o||{}));};
+  const fixedStem=pts=>{const T={id:tendrils.length,depth:1,fixed:true,pts,leaves:[]};T.curlIdx=pts.length;tendrils.push(T);pts.forEach(stamp);return T;};
+  const bc=[ox+bw/2,oy+bh/2];
+  if(LAYOUT==="wreath"){
+    // four quarter-arcs around the bird, thick at the sides, tapering to gaps top and bottom
+    const Hf=(frame.bottom-frame.cy)*2;
+    const rx=Math.min(bw*.62+.7*D,fs*.47),ry=Math.min(bh*.62+.9*D,Hf*.46),g=rr(.14,.22),Nz=makeNoise(R);
+    const arcs=[];
+    for(const sx of[-1,1])for(const sy of[-1,1]){const pts=[];const a0=sx<0?Math.PI:0;
+      for(let t=0;t<=1.0001;t+=.004){const ang=a0+sx*sy*(-1)*t*(Math.PI/2-g)*(sx<0?-1:1)*(-1);
+        const w=1+(Nz(t*3+sx*7,sy*5)-.5)*.12*WILD;pts.push([bc[0]+Math.cos(ang)*rx*w,bc[1]+Math.sin(ang)*ry*w]);}
+      arcs.push(resampleOpen(pts,Math.max(8,Math.round(Math.PI/2*Math.max(rx,ry)/STEP))));}
+    for(const pts of arcs){if(!pts.every(q=>insideF(q[0],q[1])||!inRegion(q[0],q[1])))continue;
+      const inside=pts.filter(q=>insideF(q[0],q[1]));if(inside.length<pts.length*.9)continue;const T=fixedStem(inside);shootsFrom(T,rr(.5,.9)*D,1.2,1.8,()=>rr(1.8,4)*D);}
+    shootsFrom(trunk,rr(.7,1.1)*D,1.6,2.4,()=>childLen(2));
+  }else if(LAYOUT==="climb"){
+    for(const sx of[-1,1]){const b=edgePt(sx*.7,1,6*U);seed(b[0],b[1],-Math.PI/2-sx*rr(.05,.25),sx*rr(.7,1.2)/(.45*fs),rr(1,1.35)*fs);
+      const b2=edgePt(sx*.32,1,6*U);seed(b2[0],b2[1],-Math.PI/2+sx*rr(.2,.45),-sx*rr(.8,1.3)/(.3*fs),rr(.45,.7)*fs);}
+    shootsFrom(trunk,rr(.7,1.1)*D,1.3,1.9,()=>childLen(1));
+  }else if(LAYOUT==="corners"){
+    for(const sx of[-1,1])for(const sy of[-1,1]){const c=edgePt(sx,sy,6*U);const toC=Math.atan2(frame.cy-c[1],frame.cx-c[0]);
+      const sgn=sx*sy;seed(c[0],c[1],toC+sgn*rr(.35,.6),-sgn*rr(.9,1.5)/(.3*fs),rr(.55,.85)*fs);
+      for(const off of[-.5,.5]){seed(c[0],c[1],toC+off*rr(1,1.4),off*rr(.8,1.3)/(.25*fs),rr(.25,.4)*fs);}}
+    shootsFrom(trunk,rr(.7,1.1)*D,1.4,2.1,()=>childLen(2));
+  }else if(LAYOUT==="cascade"){
+    const n=SYM==="none"?5:6;for(let i=0;i<n;i++){const fx=-.9+1.8*(i+.5)/n;const t=edgePt(fx,-1,6*U);
+      seed(t[0],t[1],Math.PI/2+rr(-.25,.25),(i%2?1:-1)*rr(.5,1)/(.4*fs),rr(.8,1.25)*fs);}
+    shootsFrom(trunk,rr(.7,1.1)*D,1.3,1.9,()=>childLen(1));
+  }else if(LAYOUT==="tile"){
+    shootsFrom(trunk,rr(.6,1)*D,1.1,1.6,()=>childLen(1));
+  }else{ // tree of life
+    shootsFrom(trunk,rr(.7,1.1)*D,1.2,1.7,()=>childLen(1));
+    const sa=rr(.55,.85);
+    seed(Bp[0]-1*U,Bp[1],-Math.PI/2-sa,-rr(.8,1.3)/(.3*fs),rr(.7,1)*fs);
+    seed(Bp[0]+1*U,Bp[1],-Math.PI/2+sa,rr(.8,1.3)/(.3*fs),rr(.7,1)*fs);
+  }
+  if(SYM==="quad"){ // medallion: seed the top-left panel from its corner and edges
+    const c=edgePt(-1,-1,6*U);seed(c[0],c[1],Math.atan2(frame.cy-c[1],frame.cx-c[0])+rr(-.3,.3),rr(-1,1)/(.3*fs),rr(.5,.8)*fs);
+    const t=edgePt(-.12,-1,6*U);seed(Math.min(t[0],frame.cx-.6*D),t[1],Math.PI/2+.5,-rr(.7,1.2)/(.3*fs),rr(.35,.55)*fs);
+    const l=edgePt(-1,-.15,6*U);seed(l[0],Math.min(l[1],frame.cy-.6*D),-.4,rr(.7,1.2)/(.3*fs),rr(.35,.55)*fs);
+  }
   if(!mirror)placeLeaves(trunk);
+  for(const T of tendrils)if(T.fixed&&T!==trunk)placeLeaves(T);
   processQueue();
   fillGaps(260);
 
   if(mirror){
     const Nz=makeNoise(R);
-    const mp=p=>[2*frame.cx-p[0]+(Nz(p[0]/80,p[1]/80)-.5)*6*U,p[1]+(Nz(p[0]/80+50,p[1]/80+9)-.5)*6*U];
+    const jit=q=>[q[0]+(Nz(q[0]/80,q[1]/80)-.5)*6*U,q[1]+(Nz(q[0]/80+50,q[1]/80+9)-.5)*6*U];
     const n0=tendrils.length;
-    for(let i=1;i<n0;i++){const T=tendrils[i];
-      tendrils.push({id:tendrils.length,depth:T.depth,mirrored:true,curlIdx:T.curlIdx,pts:T.pts.map(mp),
-        leaves:T.leaves.map(Lf=>{const q=mp([Lf.x,Lf.y]);return Object.assign({},Lf,{x:q[0],y:q[1],ang:Math.PI-Lf.ang,bend:-Lf.bend,asym:-Lf.asym,tid:-1});})});}
+    for(const t of TX.slice(1))for(let i=1;i<n0;i++){const T=tendrils[i];
+      tendrils.push({id:tendrils.length,depth:T.depth,mirrored:true,fixed:T.fixed,curlIdx:T.curlIdx,pts:T.pts.map(q=>jit(t.p(q))),
+        leaves:T.leaves.map(Lf=>{const q=jit(t.p([Lf.x,Lf.y]));return Object.assign({},Lf,{x:q[0],y:q[1],ang:t.a(Lf.ang),bend:t.s*Lf.bend,asym:t.s*Lf.asym,tid:-1});})});}
     buildField(false,false);
     for(const T of tendrils)T.pts.forEach(stamp);
     for(const T of tendrils){if(T.mirrored)continue;for(const Lf of T.leaves)markLeaf(T.id,leafFoot(Lf));}
@@ -484,12 +651,13 @@ function compose(cfg,seed){
   queue.push({x:P[0],y:P[1],ang:Math.atan2(tv[1],tv[0]),depth:1,parent:0,baseK:(R()<.5?1:-1)*rr(.6,1.2)/(.3*fs),maxLen:rr(.22,.4)*fs,grace:Math.max(bw,bh)*.25+.4*D,force:true});
   processQueue();
   fillGaps(320);
+  }
   const sp0=L*.42*(1.18-.03*cfg.density);
   const keep=new Set();
   for(let i=tendrils.length-1;i>=1;i--){const T=tendrils[i],len=T.pts.length*STEP;
-    if(len>1.2*D&&(T.leaves||[]).length<.3*len/sp0&&!keep.has(T.id))T.hidden=true;
+    if(!T.fixed&&len>1.2*D&&(T.leaves||[]).length<.3*len/sp0&&!keep.has(T.id))T.hidden=true;
     else if(T.parent!==undefined)keep.add(T.parent);}
-  return{bird,pal,palKey,style,frame,tendrils,place,trunk};
+  return{bird,pal,palKey,style,frame,tendrils,place,trunk,mound,plant:PLANT};
 }
 
 /* ---------------- painting ---------------- */
@@ -526,7 +694,87 @@ function washShape(ctx,poly,col,R,a){
   for(let k=0;k<3;k++)fillPoly(ctx,deform(base,1,.15,R));
   ctx.strokeStyle=rgba(dark(col,.3),.35);ctx.lineWidth=.7*U;strokePoly(ctx,deform(base,1,.05,R),true);
 }
+
+/* ---------- plant-specific leaf, flower and tendril shapes ---------- */
+const angd=(a,b)=>Math.atan2(Math.sin(a-b),Math.cos(a-b));
+const toW=(Lf,u,v)=>{const ca=Math.cos(Lf.ang),sa=Math.sin(Lf.ang);return[Lf.x+u*ca-v*sa,Lf.y+u*sa+v*ca];};
+function bez(p0,p1,p2,p3,n,out){for(let i=0;i<=n;i++){const t=i/n,u=1-t;out.push([u*u*u*p0[0]+3*u*u*t*p1[0]+3*u*t*t*p2[0]+t*t*t*p3[0],u*u*u*p0[1]+3*u*u*t*p1[1]+3*u*t*t*p2[1]+t*t*t*p3[1]]);}}
+function heartPoly(Lf){ // cordate: two rounded lobes at the stalk, pointed tip
+  const L=Lf.len,w=Lf.wr/.5,side=[];bez([.1,0],[-.07,.12*w],[-.05,.44*w],[.24,.46*w],8,side);bez([.24,.46*w],[.5,.48*w],[.82,.2*w],[1,0],10,side);
+  const top=side.map(([u,v])=>toW(Lf,u*L,v*L*(1+Lf.asym))),bot=side.slice().reverse().map(([u,v])=>toW(Lf,u*L,-v*L*(1-Lf.asym)));
+  return{poly:top.concat(bot.slice(1)),half:top.concat([toW(Lf,.1*L,0)])};}
+function lobedPoly(Lf,lobes,sig,teeth){ // palmate: radius pulled out toward each lobe direction, notch at the stalk
+  const L=Lf.len,c=toW(Lf,L*.46,0),R0=L*.54,pts=[];
+  for(let i=0;i<84;i++){const t=i/84*TAU;let m=0;for(const[a,l]of lobes){const d=angd(t,a);m=Math.max(m,l*Math.exp(-d*d/(2*sig*sig)));}
+    let r=R0*(.36+.64*m);if(teeth)r*=1+teeth*Math.sin(t*28);const bk=angd(t,Math.PI);r*=1-.4*Math.exp(-bk*bk/(2*.13*.13));
+    pts.push([c[0]+Math.cos(t+Lf.ang)*r,c[1]+Math.sin(t+Lf.ang)*r]);}
+  return{poly:pts,c};}
+function veins(ctx,c,Lf,lobes,len,col){ctx.strokeStyle=rgba(col,.32);ctx.lineWidth=.7*U;for(const[a,l]of lobes){ctx.beginPath();ctx.moveTo(c[0],c[1]);ctx.lineTo(c[0]+Math.cos(Lf.ang+a)*len*l,c[1]+Math.sin(Lf.ang+a)*len*l);ctx.stroke();}}
+function washPoly(ctx,poly,col,R,a,v){const base=deform(poly,1,v??.08,R);ctx.fillStyle=rgba(col,a);for(let k=0;k<3;k++)fillPoly(ctx,deform(base,1,(v??.08)*.8,R));
+  ctx.strokeStyle=rgba(dark(col,.3),.32+R()*.15);ctx.lineWidth=(.55+R()*.5)*U;strokePoly(ctx,deform(base,1,.03,R),true);return base;}
+function circlePoly(cx,cy,r,n){const p=[];for(let i=0;i<(n||18);i++){const t=i/(n||18)*TAU;p.push([cx+Math.cos(t)*r,cy+Math.sin(t)*r]);}return p;}
+function paintPlantShape(ctx,Lf,pal,stemCol,R){
+  const sh=Lf.shape,L=Lf.len;
+  const leafCol=()=>{let c=leafColor(pal,R);const rv=R();return rv<.12?dark(c,.12):rv>.8?light(c,.22):c;};
+  if(sh==="heart"){const col=leafCol(),g=heartPoly(Lf);washPoly(ctx,g.poly,col,R,.36,.07);if(R()<.5){ctx.fillStyle=rgba(dark(col,.14),.16);fillPoly(ctx,g.half);}
+    ctx.strokeStyle=rgba(dark(col,.3),.3);ctx.lineWidth=.7*U;const a=toW(Lf,.1*L,0),b=toW(Lf,.9*L,0);ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();return true;}
+  if(sh==="ivy"||sh==="grape"){const col=leafCol(),five=sh==="grape"||R()<.6;
+    const lobes=five?[[0,1],[.95,.8],[-.95,.8],[1.9,.52],[-1.9,.52]]:[[0,1],[1.05,.72],[-1.05,.72]];
+    const g=lobedPoly(Lf,lobes,sh==="grape"?.44:.27,sh==="grape"?.035:0);
+    ctx.strokeStyle=rgba(stemCol,.7);ctx.lineWidth=.9*U;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);ctx.lineTo(g.c[0],g.c[1]);ctx.stroke();
+    washPoly(ctx,g.poly,col,R,.36,.05);veins(ctx,g.c,Lf,lobes,L*.42,dark(col,.3));return true;}
+  if(sh==="pinnate"){const col=leafCol(),a0=toW(Lf,0,0),a1=toW(Lf,L,0);
+    ctx.strokeStyle=rgba(stemCol,.75);ctx.lineWidth=.9*U;ctx.beginPath();ctx.moveTo(a0[0],a0[1]);ctx.quadraticCurveTo(...toW(Lf,L*.5,L*Lf.bend*.25),a1[0],a1[1]);ctx.stroke();
+    for(const t of[.22,.42,.6,.76]){const p=toW(Lf,t*L,L*Lf.bend*.25*4*t*(1-t));for(const sd of[1,-1]){
+      const g=leafGeom({x:p[0],y:p[1],ang:Lf.ang+sd*rr2(R,.85,1.05),len:L*.3*(1.08-.35*t),wr:.3,bend:-sd*.15,asym:0,shape:"almond"});washPoly(ctx,g.poly,jit(col,R,.06),R,.36,.08);}}
+    const g=leafGeom({x:a1[0],y:a1[1],ang:Lf.ang,len:L*.3,wr:.3,bend:0,asym:0,shape:"almond"});washPoly(ctx,g.poly,col,R,.36,.08);return true;}
+  if(sh==="rumi"){const col=leafCol(),g=leafGeom(Object.assign({},Lf,{shape:"almond",bend:(Lf.bend>=0?1:-1)*.75}));washPoly(ctx,g.poly,col,R,.38,.06);return true;}
+  if(sh==="palmette"){const col=leafCol(),deep=dark(col,.25);
+    for(const sd of[1,-1]){const g=leafGeom({x:Lf.x,y:Lf.y,ang:Lf.ang+sd*.5,len:L*.95,wr:.34,bend:sd*.95,asym:sd*.15,shape:"teardrop"});washPoly(ctx,g.poly,col,R,.38,.06);
+      const g2=leafGeom({x:Lf.x,y:Lf.y,ang:Lf.ang+sd*.5,len:L*.6,wr:.18,bend:sd*.95,asym:0,shape:"teardrop"});ctx.strokeStyle=rgba(deep,.4);ctx.lineWidth=.7*U;strokePoly(ctx,g2.poly,true);}
+    const g=leafGeom({x:Lf.x,y:Lf.y,ang:Lf.ang,len:L*.55,wr:.22,bend:0,asym:0,shape:"teardrop"});washPoly(ctx,g.poly,light(col,.1),R,.4,.05);return true;}
+  if(sh==="paisley"){const col=leafCol(),deep=dark(col,.3),sd=Lf.bend>=0?1:-1;
+    const g=leafGeom(Object.assign({},Lf,{shape:"round",wr:.42,bend:sd*.95,asym:sd*.18}));washPoly(ctx,g.poly,col,R,.36,.05);
+    const g2=leafGeom({x:toW(Lf,L*.12,0)[0],y:toW(Lf,L*.12,0)[1],ang:Lf.ang,len:L*.62,wr:.3,bend:sd*.95,asym:sd*.18,shape:"round"});ctx.strokeStyle=rgba(deep,.45);ctx.lineWidth=.8*U;strokePoly(ctx,g2.poly,true);
+    ctx.fillStyle=rgba(deep,.55);for(const t of[.25,.4,.55]){const p=toW(Lf,L*t,sd*L*.06);ctx.beginPath();ctx.arc(p[0],p[1],1.3*U,0,TAU);ctx.fill();}return true;}
+  if(sh==="trumpet"){const GL=[[92,112,204],[140,96,190],[205,104,150],[96,150,210]],col=jit(mixc(GL[(R()*GL.length)|0],pal.A,.12),R,.06),c=toW(Lf,L*.62,0),r=L*.44;
+    ctx.fillStyle=rgba(light(col,.2),.35);fillPoly(ctx,[toW(Lf,0,L*.04),toW(Lf,L*.4,L*.14),toW(Lf,L*.4,-L*.14),toW(Lf,0,-L*.04)]);
+    const face=washPoly(ctx,circlePoly(c[0],c[1],r,26),col,R,.4,.04);
+    ctx.fillStyle=rgba(light(col,.6),.55);ctx.beginPath();ctx.arc(c[0],c[1],r*.32,0,TAU);ctx.fill();
+    ctx.strokeStyle=rgba(dark(col,.35),.45);ctx.lineWidth=.9*U;const a0=R()*TAU;for(let i=0;i<5;i++){const a=a0+i/5*TAU;ctx.beginPath();ctx.moveTo(c[0]+Math.cos(a)*r*.3,c[1]+Math.sin(a)*r*.3);ctx.lineTo(c[0]+Math.cos(a)*r*.95,c[1]+Math.sin(a)*r*.95);ctx.stroke();}
+    ctx.fillStyle=rgba([235,215,140],.7);ctx.beginPath();ctx.arc(c[0],c[1],r*.1,0,TAU);ctx.fill();return true;}
+  if(sh==="raceme"){const base=mixc([150,128,200],pal.L[0],.18);
+    ctx.strokeStyle=rgba(stemCol,.65);ctx.lineWidth=.9*U;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);const e=toW(Lf,L,L*.08);ctx.quadraticCurveTo(...toW(Lf,L*.5,L*.12),e[0],e[1]);ctx.stroke();
+    for(let k=0;k<24;k++){const t=k/23,p=toW(Lf,L*(.08+.9*t),L*.12*4*t*(1-t)*.6+(R()-.5)*L*.12*(1-t)),r=L*.085*(1-.55*t)*rr2(R,.85,1.15);
+      const col=mixc(dark(base,.15),light(base,.45),t*.8+R()*.15);ctx.fillStyle=rgba(col,.5);ctx.beginPath();ctx.ellipse(p[0],p[1],r,r*.75,R()*TAU,0,TAU);ctx.fill();
+      ctx.fillStyle=rgba(light(col,.3),.4);ctx.beginPath();ctx.arc(p[0]+r*.3,p[1]-r*.2,r*.45,0,TAU);ctx.fill();}return true;}
+  if(sh==="grapes"){const base=mixc([92,58,110],pal.L[3]||pal.L[0],.22);
+    ctx.strokeStyle=rgba(stemCol,.7);ctx.lineWidth=1*U;const top=toW(Lf,L*.12,0);ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);ctx.lineTo(top[0],top[1]);ctx.stroke();
+    const rows=[4,4,3,3,2,1],br=L*.1;rows.forEach((n,ri)=>{for(let k=0;k<n;k++){const u=L*.2+ri*br*1.55,v=(k-(n-1)/2)*br*1.8+(R()-.5)*br*.3;const p=toW(Lf,u,v);
+      const col=jit(base,R,.12);washPoly(ctx,circlePoly(p[0],p[1],br,14),col,R,.5,.05);ctx.fillStyle="rgba(255,255,255,.45)";ctx.globalCompositeOperation="source-over";ctx.beginPath();ctx.arc(p[0]-br*.3,p[1]-br*.3,br*.22,0,TAU);ctx.fill();ctx.globalCompositeOperation="multiply";}});return true;}
+  if(sh==="rosette"){const c=toW(Lf,L*.5,0),r=L*.5,acc=pal.A,deep=dark(pal.S,.15),a0=R()*TAU;
+    ctx.strokeStyle=rgba(stemCol,.75);ctx.lineWidth=1*U;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);ctx.lineTo(c[0],c[1]);ctx.stroke();
+    for(let i=0;i<8;i++){const a=a0+i/8*TAU,g=leafGeom({x:c[0],y:c[1],ang:a,len:r,wr:.36,bend:0,asym:0,shape:"teardrop"});washPoly(ctx,g.poly,acc,R,.34,.05);}
+    for(let i=0;i<8;i++){const a=a0+(i+.5)/8*TAU,g=leafGeom({x:c[0],y:c[1],ang:a,len:r*.62,wr:.4,bend:0,asym:0,shape:"round"});washPoly(ctx,g.poly,light(acc,.3),R,.34,.05);}
+    ctx.fillStyle=rgba(deep,.6);ctx.beginPath();ctx.arc(c[0],c[1],r*.2,0,TAU);ctx.fill();
+    ctx.fillStyle=rgba(light(acc,.5),.8);for(let i=0;i<10;i++){const a=i/10*TAU;ctx.beginPath();ctx.arc(c[0]+Math.cos(a)*r*.12,c[1]+Math.sin(a)*r*.12,1.1*U,0,TAU);ctx.fill();}return true;}
+  if(sh==="ivyberry"){const c=toW(Lf,L*.55,0);for(let k=0;k<6;k++){const a=k/6*TAU+R(),p=[c[0]+Math.cos(a)*L*.18,c[1]+Math.sin(a)*L*.18];
+    ctx.strokeStyle=rgba(stemCol,.6);ctx.lineWidth=.7*U;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);ctx.lineTo(p[0],p[1]);ctx.stroke();washPoly(ctx,circlePoly(p[0],p[1],L*.11,12),[40,40,60],R,.5,.06);}return true;}
+  if(sh==="tendril"){ctx.strokeStyle=rgba(stemCol,.8);ctx.lineWidth=.9*U*STEMW/1.2;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);
+    let p=[Lf.x,Lf.y],a=Lf.ang,step=L/40;for(let i=0;i<110;i++){const t=i/110;a+=Lf.dir*(t<.25?0:.06+.32*Math.pow(t,1.6));const l=step*(1-.6*t);p=[p[0]+Math.cos(a)*l,p[1]+Math.sin(a)*l];ctx.lineTo(p[0],p[1]);}ctx.stroke();return true;}
+  return false;
+}
 function paintLeaf(ctx,Lf,pal,stemCol,R){
+  if(paintPlantShape(ctx,Lf,pal,stemCol,R))return;
+  if(Lf.shape==="peony"){const r=Lf.len*.5,c=[Lf.x+Math.cos(Lf.ang)*r*.9,Lf.y+Math.sin(Lf.ang)*r*.9],a0=R()*TAU;
+    ctx.strokeStyle=rgba(stemCol,.75);ctx.lineWidth=1.2*U;ctx.beginPath();ctx.moveTo(Lf.x,Lf.y);ctx.lineTo(c[0],c[1]);ctx.stroke();
+    const base=pal.L[0],deep=dark(pal.S,.1);
+    // three rings of cupped petals, pale outside to deep at the heart
+    for(const[ring,n,rad,len,col,al]of[[0,8,r*.62,r*.62,light(base,.35),.3],[1,6,r*.36,r*.48,base,.32],[2,5,r*.14,r*.32,deep,.36]]){
+      for(let i=0;i<n;i++){const a=a0+ring*.4+i/n*TAU,px=c[0]+Math.cos(a)*rad*.35,py=c[1]+Math.sin(a)*rad*.35;
+        const g=leafGeom({x:px,y:py,ang:a,len,wr:.55,bend:0,asym:0,shape:"round"});washShape(ctx,g.poly,col,R,al);}}
+    ctx.fillStyle=rgba(deep,.6);for(let i=0;i<7;i++){const a=R()*TAU,d=R()*r*.12;ctx.beginPath();ctx.arc(c[0]+Math.cos(a)*d,c[1]+Math.sin(a)*d,.9*U,0,TAU);ctx.fill();}
+    return;}
   if(Lf.shape==="flower"){const r=Lf.len*.45,c=[Lf.x+Math.cos(Lf.ang)*r,Lf.y+Math.sin(Lf.ang)*r],a0=R()*TAU,col=mixc(pal.A,leafColor(pal,R),.15);
     for(let i=0;i<5;i++){const g=leafGeom({x:c[0],y:c[1],ang:a0+i/5*TAU,len:r*.95,wr:.4,bend:0,asym:0,shape:"teardrop"});washShape(ctx,g.poly,col,R,.3);}
     ctx.fillStyle=rgba(dark(pal.A,.35),.75);ctx.beginPath();ctx.arc(c[0],c[1],r*.2,0,TAU);ctx.fill();return;}
@@ -545,9 +793,91 @@ function paintLeaf(ctx,Lf,pal,stemCol,R){
   if(R()<.45){ctx.fillStyle=rgba(dark(col,.14),.16+R()*.1);fillPoly(ctx,deform(g.half,1,.08,R));}
   ctx.strokeStyle=rgba(dark(col,.3),.28+R()*.22);ctx.lineWidth=(.55+R()*.55)*U;strokePoly(ctx,deform(base,1,.05,R),true);
 }
+function framePath(fr){const p=new Path2D();for(let i=0;i<=360;i++){const a=i/360*TAU;let t=0;while(fr.inside(fr.cx+Math.cos(a)*(t+3*U),fr.cy+Math.sin(a)*(t+3*U))&&t<W*2)t+=3*U;
+  const x=fr.cx+Math.cos(a)*t,y=fr.cy+Math.sin(a)*t;i?p.lineTo(x,y):p.moveTo(x,y);}p.closePath();return p;}
+function rr2(R,a,b){return a+(b-a)*R();}
+function paintRim(ctx,comp,R){
+  // a porcelain-style border: double rings, a band of lappets on a washed ground, a key-fret band, double rings
+  const fr=comp.frame,{R:Rr}=fr.rim,cx=fr.cx,cy=fr.cy,pal=comp.pal;
+  const deep=dark(pal.S,.12),wash=pal.L[0];const pol=(a,r)=>[cx+Math.cos(a)*r,cy+Math.sin(a)*r];
+  ctx.save();ctx.globalCompositeOperation="multiply";ctx.lineCap="round";ctx.lineJoin="round";
+  const ring=(r,w,al)=>{ctx.strokeStyle=rgba(deep,al);ctx.lineWidth=w;ctx.beginPath();ctx.arc(cx+gauss(R)*.3*U,cy+gauss(R)*.3*U,r,0,TAU);ctx.stroke();};
+  ring(Rr,2.6*U,.8);ring(Rr*.982,1*U,.6);
+  // band A: washed ground between .975R and .862R with reserved lappets
+  const ro=Rr*.972,rt=Rr*.866,N=2*Math.round(rr2(R,8,12)),seg=TAU/N,rot=R()*seg;
+  ctx.fillStyle=rgba(wash,.28);ctx.beginPath();ctx.arc(cx,cy,ro,0,TAU);ctx.arc(cx,cy,rt,0,TAU,true);ctx.fill("evenodd");
+  ctx.fillStyle=rgba(wash,.16);ctx.beginPath();ctx.arc(cx,cy,ro,0,TAU);ctx.arc(cx,cy,rt,0,TAU,true);ctx.fill("evenodd");
+  const style=R()<.5?"lappet":"scallop";
+  for(let i=0;i<N;i++){const a0=rot+i*seg,a1=a0+seg,am=(a0+a1)/2,pad=seg*.04;
+    const p=new Path2D();
+    if(style==="lappet"){const A=pol(a0+pad,ro),T=pol(am,rt+Rr*.004),B=pol(a1-pad,ro);
+      const c1=pol(a0+pad,(ro+rt)/2),c2=pol(am-seg*.2,rt+(ro-rt)*.12),c3=pol(am+seg*.2,rt+(ro-rt)*.12),c4=pol(a1-pad,(ro+rt)/2);
+      p.moveTo(A[0],A[1]);p.bezierCurveTo(c1[0],c1[1],c2[0],c2[1],T[0],T[1]);p.bezierCurveTo(c3[0],c3[1],c4[0],c4[1],B[0],B[1]);p.arc(cx,cy,ro,a1-pad,a0+pad,true);}
+    else{const c=pol(am,ro),rs=Math.min((ro-rt)*.82,ro*Math.sin(seg/2)*.95);p.arc(c[0],c[1],rs,am+Math.PI/2,am+Math.PI*1.5);p.closePath();}
+    ctx.save();ctx.globalCompositeOperation="source-over";ctx.fillStyle="rgba(251,250,246,.93)";ctx.fill(p);ctx.restore();
+    ctx.strokeStyle=rgba(deep,.75);ctx.lineWidth=1.3*U;ctx.stroke(p);
+    // small motif inside each panel: a dot within a ring, or a three-lobed sprig
+    const m=pol(am,(ro+rt)/2+(style==="lappet"?(ro-rt)*.12:(ro-rt)*.28));
+    if(i%2===0){ctx.lineWidth=1*U;ctx.beginPath();ctx.arc(m[0],m[1],(ro-rt)*.15,0,TAU);ctx.stroke();ctx.fillStyle=rgba(deep,.7);ctx.beginPath();ctx.arc(m[0],m[1],(ro-rt)*.05,0,TAU);ctx.fill();}
+    else{ctx.fillStyle=rgba(wash,.6);for(const d of[-1,0,1]){const q=pol(am+d*seg*.12,(ro+rt)/2+(d?0:(ro-rt)*.12));ctx.beginPath();ctx.arc(q[0],q[1],(ro-rt)*.08,0,TAU);ctx.fill();}}}
+  ring(Rr*.856,2*U,.75);ring(Rr*.843,1*U,.55);
+  // band B: key fret (or a ring of dots) between rails
+  const r1=Rr*.832,r0=Rr*.772;ring(r1,1.2*U,.6);ring(r0,1.2*U,.6);
+  const M=Math.round(TAU*(r0+r1)/2/((r1-r0)*1.25)),us=TAU/M;
+  if(R()<.65){ctx.strokeStyle=rgba(deep,.75);ctx.lineWidth=1.3*U;const hook=[[0,0],[0,.78],[.66,.78],[.66,.3],[.33,.3],[.33,.55]];
+    for(let k=0;k<M;k++){ctx.beginPath();hook.forEach(([u,v],j)=>{const q=pol(k*us+u*us*.9,r0+(r1-r0)*(.1+v*.82));j?ctx.lineTo(q[0],q[1]):ctx.moveTo(q[0],q[1]);});ctx.stroke();}}
+  else{for(let k=0;k<M;k++){const q=pol(k*us,(r0+r1)/2);ctx.fillStyle=rgba(k%2?wash:deep,k%2?.5:.6);ctx.beginPath();ctx.arc(q[0],q[1],(r1-r0)*(k%2?.22:.14),0,TAU);ctx.fill();}}
+  ring(Rr*.758,1.6*U,.7);ring(Rr*.745,.9*U,.5);
+  ctx.restore();
+}
+
+function paintMound(ctx,m,pal,R){ // kalamkari hill: rows of scalloped rocks, narrowing upward
+  ctx.save();ctx.globalCompositeOperation="multiply";const deep=dark(pal.S,.2),wash=pal.L[2]||pal.L[0];
+  for(let row=0;row<4;row++){const w=m.w*(1-.2*row),n=7-row,rb=w/(2*n),y=m.y-row*rb*1.25;
+    for(let k=0;k<n;k++){const x=m.x-w/2+rb+k*2*rb;const p=new Path2D();p.arc(x,y,rb,Math.PI,0);p.closePath();
+      ctx.fillStyle=rgba(jit(wash,R,.08),.3);ctx.fill(p);ctx.strokeStyle=rgba(deep,.55);ctx.lineWidth=1.2*U;ctx.stroke(p);
+      ctx.lineWidth=.8*U;ctx.strokeStyle=rgba(deep,.35);ctx.beginPath();ctx.arc(x,y,rb*.55,Math.PI*1.1,Math.PI*1.9);ctx.stroke();}}
+  ctx.restore();}
+function paintInlay(ctx,comp,R){ // Mughal pietra-dura style border: keylines, a band of small symmetric flower sprays, rosettes at the corners
+  const{x0,y0,x1,y1,bw}=comp.frame.inlay,pal=comp.pal,deep=dark(pal.S,.18),flower=pal.A,leafc=pal.L[0];
+  ctx.save();ctx.globalCompositeOperation="multiply";ctx.lineJoin="round";ctx.lineCap="round";
+  const rect=(a,b,c,d,w,al)=>{ctx.strokeStyle=rgba(deep,al);ctx.lineWidth=w;ctx.strokeRect(a,b,c-a,d-b);};
+  ctx.fillStyle=rgba(leafc,.1);ctx.beginPath();ctx.rect(x0,y0,x1-x0,y1-y0);ctx.rect(x0+bw,y1-bw,x1-x0-2*bw,-(y1-y0-2*bw));ctx.fill("evenodd");
+  rect(x0,y0,x1,y1,2.4*U,.8);rect(x0+5*U,y0+5*U,x1-5*U,y1-5*U,.9*U,.55);rect(x0+bw,y0+bw,x1-bw,y1-bw,2*U,.75);rect(x0+bw-5*U,y0+bw-5*U,x1-bw+5*U,y1-bw+5*U,.9*U,.5);
+  const leaf=(x,y,a,l,col)=>{const g=leafGeom({x,y,ang:a,len:l,wr:.3,bend:0,asym:0,shape:"almond"});washPoly(ctx,g.poly,col,R,.42,.05);};
+  const spray=(cx,cy,sz,variant)=>{ // stem with paired leaves, side buds and a flower at the top
+    const yb=cy+sz*.42,yt=cy-sz*.12;ctx.strokeStyle=rgba(deep,.7);ctx.lineWidth=1.1*U;ctx.beginPath();ctx.moveTo(cx,yb);ctx.quadraticCurveTo(cx+sz*.04,(yb+yt)/2,cx,yt);ctx.stroke();
+    for(const[yy,l]of[[cy+sz*.24,.3],[cy+sz*.04,.24]])for(const sd of[1,-1])leaf(cx,yy,-Math.PI/2+sd*.95,sz*l,jit(leafc,R,.08));
+    for(const sd of[1,-1]){ctx.beginPath();ctx.moveTo(cx,cy+sz*.12);ctx.quadraticCurveTo(cx+sd*sz*.18,cy+sz*.05,cx+sd*sz*.24,cy-sz*.08);ctx.stroke();
+      washPoly(ctx,circlePoly(cx+sd*sz*.24,cy-sz*.12,sz*.05,10),flower,R,.45,.06);}
+    if(variant===0){for(const[a,l]of[[-Math.PI/2,.3],[-Math.PI/2-.42,.26],[-Math.PI/2+.42,.26]]){const g=leafGeom({x:cx,y:yt,ang:a,len:sz*l,wr:.42,bend:0,asym:0,shape:"teardrop"});washPoly(ctx,g.poly,flower,R,.42,.05);}}
+    else{for(let i=0;i<6;i++){const a=i/6*TAU,g=leafGeom({x:cx,y:yt-sz*.1,ang:a,len:sz*.16,wr:.5,bend:0,asym:0,shape:"round"});washPoly(ctx,g.poly,flower,R,.4,.05);}
+      ctx.fillStyle=rgba(deep,.6);ctx.beginPath();ctx.arc(cx,yt-sz*.1,sz*.04,0,TAU);ctx.fill();}};
+  const rosette=(cx,cy,sz)=>{for(let i=0;i<8;i++){const a=i/8*TAU,g=leafGeom({x:cx,y:cy,ang:a,len:sz*.36,wr:.36,bend:0,asym:0,shape:"teardrop"});washPoly(ctx,g.poly,i%2?flower:leafc,R,.4,.05);}
+    ctx.fillStyle=rgba(deep,.65);ctx.beginPath();ctx.arc(cx,cy,sz*.07,0,TAU);ctx.fill();};
+  const c=bw/2,sz=bw*.86;
+  for(const[x,y]of[[x0+c,y0+c],[x1-c,y0+c],[x0+c,y1-c],[x1-c,y1-c]])rosette(x,y,sz);
+  const nx=Math.max(1,Math.round((x1-x0-2*bw)/(bw*1.05))),ny=Math.max(1,Math.round((y1-y0-2*bw)/(bw*1.05)));
+  for(let k=0;k<nx;k++){const x=x0+bw+(k+.5)*(x1-x0-2*bw)/nx;spray(x,y0+c,sz,k%2);spray(x,y1-c,sz,k%2);}
+  for(let k=0;k<ny;k++){const y=y0+bw+(k+.5)*(y1-y0-2*bw)/ny;spray(x0+c,y,sz,(k+1)%2);spray(x1-c,y,sz,(k+1)%2);}
+  ctx.restore();}
+let wetTmp=null,cloudTex=null;
+function wetBleed(ctx){ // wet-in-wet: a blurred ghost of the paint spreads under it, and a faint bloom on top
+  const cv=ctx.canvas;if(!wetTmp)wetTmp=document.createElement("canvas");wetTmp.width=cv.width;wetTmp.height=cv.height;const t=wetTmp.getContext("2d");t.drawImage(cv,0,0);
+  ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.filter="blur("+(4.5*U).toFixed(1)+"px)";ctx.globalCompositeOperation="destination-over";ctx.globalAlpha=.55;ctx.drawImage(wetTmp,0,0);
+  ctx.globalCompositeOperation="multiply";ctx.filter="blur("+(1.6*U).toFixed(1)+"px)";ctx.globalAlpha=.16;ctx.drawImage(wetTmp,0,0);ctx.filter="none";ctx.restore();}
+function granulate(ctx,pal,tile){ // pigment settles into the paper tooth; washes dry a little uneven
+  if(!cloudTex){cloudTex=document.createElement("canvas");cloudTex.width=W;cloudTex.height=HMAX;const c=cloudTex.getContext("2d"),Nz=makeNoise(mulberry32(5)),d=c.createImageData(W,HMAX);
+    for(let y=0;y<HMAX;y++)for(let x=0;x<W;x++){const n=.6*Nz(x/90,y/90)+.4*Nz(x/30+9,y/30+4);d.data[(y*W+x)*4+3]=Math.max(0,Math.min(255,(n-.45)*600));}c.putImageData(d,0,0);}
+  const cv=ctx.canvas,reps=tile?3:1;ctx.save();ctx.setTransform(1,0,0,1,0,0);
+  for(let dy=0;dy<reps;dy++)for(let dx=0;dx<reps;dx++){
+    ctx.globalCompositeOperation="source-atop";ctx.globalAlpha=.5;ctx.drawImage(tooth,dx*W,dy*W);ctx.drawImage(tooth,dx*W+1,dy*W+1);
+    ctx.globalAlpha=.1;ctx.drawImage(cloudTex,dx*W,dy*W);
+    ctx.globalCompositeOperation="destination-out";ctx.globalAlpha=.16;ctx.drawImage(cloudTex,dx*W-W*.3,dy*W-W*.2);}
+  ctx.restore();}
 function paintStem(ctx,T,col,R){
   const pts=T.pts;if(!pts||pts.length<2)return;
-  const n=pts.length,ws=STEMW,w0=[5.6,4,3.2,2.6,2.2,1.9][Math.min(T.depth,5)]*U*ws,w1=1.2*U*ws,lf=[],rt=[];
+  const n=pts.length,ws=STEMW*(T.wmul||1),w0=[5.6,4,3.2,2.6,2.2,1.9][Math.min(T.depth,5)]*U*ws,w1=1.2*U*STEMW,lf=[],rt=[];
   for(let i=0;i<n;i++){const a=pts[Math.max(0,i-1)],b=pts[Math.min(n-1,i+1)];const tg=norm([b[0]-a[0],b[1]-a[1]]);
     const t=i/(n-1),w=(w0+(w1-w0)*Math.pow(t,.7))/2;lf.push([pts[i][0]-tg[1]*w,pts[i][1]+tg[0]*w]);rt.push([pts[i][0]+tg[1]*w,pts[i][1]-tg[0]*w]);}
   const poly=lf.concat(rt.reverse());
@@ -557,7 +887,7 @@ function paintStem(ctx,T,col,R){
 }
 function paintBird(ctx,pl){
   const{bird,flip,s,ox,oy}=pl;
-  ctx.save();ctx.setTransform(1,0,0,1,0,0);
+  ctx.save();ctx.setTransform(1,0,0,1,OFFX,OFFY);
   ctx.translate(ox,oy);if(flip){ctx.translate(bird.w*s,0);ctx.scale(-1,1);}
   // knock the vine out from under the bird, then lay the painting in
   ctx.globalCompositeOperation="destination-out";ctx.drawImage(bird.img,0,0,bird.w*s,bird.h*s);
@@ -570,7 +900,10 @@ const $=id=>document.getElementById(id);
 const img=$("final"),statusEl=$("status");
 let token=0;
 const nextFrame=()=>new Promise(r=>requestAnimationFrame(()=>r()));
-function compositeLive(){lctx.setTransform(1,0,0,1,0,0);lctx.globalCompositeOperation="source-over";lctx.globalAlpha=1;lctx.drawImage(paper,0,0);lctx.drawImage(pig,0,0);}
+let big=null,bctx=null,OFFX=0,OFFY=0,FOLD=false;
+function foldTile(){pctx.setTransform(1,0,0,1,0,0);pctx.globalAlpha=1;pctx.globalCompositeOperation="source-over";pctx.clearRect(0,0,W,HMAX);
+  for(let dy=0;dy<3;dy++)for(let dx=0;dx<3;dx++)pctx.drawImage(big,dx*W,dy*W,W,W,0,0,W,W);}
+function compositeLive(){if(FOLD)foldTile();lctx.setTransform(1,0,0,1,0,0);lctx.globalCompositeOperation="source-over";lctx.globalAlpha=1;lctx.drawImage(paper,0,0);lctx.drawImage(pig,0,0);}
 function creditHTML(b){const c=b.cite;return`After <a href="${c.objectUrl}" target="_blank" rel="noopener">${c.artist}, <i>${c.title}</i></a>, ${c.dateDisplay}, watercolour. ${c.institution}, ${c.objectNumber}. Public domain.`;}
 async function render(cfg,seed){
   const my=++token;
@@ -579,9 +912,9 @@ async function render(cfg,seed){
   if(!paper)buildPaper();
   await Promise.all(LIB.map(b=>b.ready));
   if(my!==token)return;
-  H=cfg.frame==="card"?HMAX:W;if(live.height!==H)live.height=H;
+  H=cfg.frame==="card"||cfg.frame==="inlay"?HMAX:W;if(live.height!==H)live.height=H;
   const cardEl=$("card");cardEl.style.aspectRatio=W+" / "+H;cardEl.classList.toggle("portrait",H>W);
-  const comp=compose(cfg,seed);STEMW=Math.sqrt(cfg.leafSize)*1.2;
+  const comp=compose(cfg,seed);STEMW=Math.sqrt(cfg.leafSize)*1.2*(cfg.stems||1);
   if(my!==token)return;
   const b=comp.bird;
   $("capName").textContent=b.name;$("capLatin").textContent=b.latin;
@@ -589,13 +922,26 @@ async function render(cfg,seed){
   $("capCredit").innerHTML=creditHTML(b);
   img.hidden=true;live.hidden=false;
   pctx.setTransform(1,0,0,1,0,0);pctx.globalAlpha=1;pctx.globalCompositeOperation="source-over";pctx.clearRect(0,0,W,HMAX);
+  // tiles paint on a 3x3 sheet centred on the tile, then fold it back so anything crossing an edge reappears opposite
+  const tile=!!comp.frame.tile;
+  if(tile){if(!big){big=document.createElement("canvas");big.width=3*W;big.height=3*W;bctx=big.getContext("2d");}
+    bctx.setTransform(1,0,0,1,0,0);bctx.globalAlpha=1;bctx.globalCompositeOperation="source-over";bctx.clearRect(0,0,3*W,3*W);}
+  const PX=tile?bctx:pctx;OFFX=tile?W:0;OFFY=tile?W:0;FOLD=tile;
   compositeLive();
   const R=mulberry32(seed*7919+13);const jobs=[];const stemCols=new Map();
+  const job=(k,f)=>jobs.push({k,f:()=>{PX.setTransform(1,0,0,1,OFFX,OFFY);PX.globalAlpha=1;f();}});
+  const Rb=mulberry32(seed*104729+7);   // background gets its own stream so it stays put when the vine changes
+  if(comp.mound)job("stem",()=>paintMound(PX,comp.mound,comp.pal,Rb));
   for(const T of comp.tendrils){if(T.hidden)continue;const sc=jit(mixc(comp.pal.S,comp.pal.L[(R()*comp.pal.L.length)|0],.08),R,.04);stemCols.set(T,sc);
-    jobs.push({k:"stem",f:()=>{pctx.globalCompositeOperation="multiply";paintStem(pctx,T,sc,R);}});}
-  for(const T of comp.tendrils)if(!T.hidden)for(const Lf of (T.leaves||[]))jobs.push({k:"leaf",f:()=>{pctx.globalCompositeOperation="multiply";paintLeaf(pctx,Lf,comp.pal,stemCols.get(T),R);}});
-  jobs.push({k:"grain",f:()=>{pctx.setTransform(1,0,0,1,0,0);pctx.globalCompositeOperation="destination-out";pctx.globalAlpha=.22;pctx.drawImage(tooth,0,0);pctx.globalAlpha=1;pctx.globalCompositeOperation="source-over";}});
-  jobs.push({k:"bird",f:()=>paintBird(pctx,comp.place)});
+    job("stem",()=>{PX.globalCompositeOperation="multiply";paintStem(PX,T,sc,R);});}
+  for(const T of comp.tendrils)if(!T.hidden)for(const Lf of (T.leaves||[]))job("leaf",()=>{PX.globalCompositeOperation="multiply";paintLeaf(PX,Lf,comp.pal,stemCols.get(T),R);});
+  const paint=cfg.paint||"wet";
+  if(paint==="wet")jobs.push({k:"leaf",f:()=>wetBleed(PX)});
+  if(paint==="granular")jobs.push({k:"leaf",f:()=>granulate(PX,comp.pal,tile)});
+  if(comp.frame.rim)job("leaf",()=>paintRim(PX,comp,Rb));
+  if(comp.frame.inlay)job("leaf",()=>paintInlay(PX,comp,Rb));
+  if(!tile)jobs.push({k:"grain",f:()=>{pctx.setTransform(1,0,0,1,0,0);pctx.globalCompositeOperation="destination-out";pctx.globalAlpha=.22;pctx.drawImage(tooth,0,0);pctx.globalAlpha=1;pctx.globalCompositeOperation="source-over";}});
+  jobs.push({k:"bird",f:()=>paintBird(PX,comp.place)});
   let i=0;
   while(i<jobs.length){
     const t0=performance.now();
@@ -604,6 +950,7 @@ async function render(cfg,seed){
       j.f();}
     compositeLive();await nextFrame();if(my!==token)return;
   }
+  if(tile){foldTile();FOLD=false;pctx.setTransform(1,0,0,1,0,0);pctx.globalCompositeOperation="destination-out";pctx.globalAlpha=.22;pctx.drawImage(tooth,0,0);}
   pctx.setTransform(1,0,0,1,0,0);pctx.globalCompositeOperation="destination-out";pctx.globalAlpha=.08;pctx.drawImage(tooth,0,0);pctx.globalAlpha=1;pctx.globalCompositeOperation="source-over";
   compositeLive();
   plateSnap.width=W;plateSnap.height=H;plateSnap.getContext("2d").drawImage(live,0,0);
@@ -624,7 +971,7 @@ const F_DISP='"Sorts Mill Goudy","Iowan Old Style",Georgia,serif',F_BODY='"Alegr
 const ANINYA="Inspired by Aninya\u2019s painted cards";
 // credit line + a tiny camera glyph and the handle; uses the current font and fill colour
 function drawAninya(ctx,x,y,align){
-  const fsz=parseFloat(ctx.font.match(/(\d+(?:\.\d+)?)px/)[1]),gap=fsz*.55,g=fsz*.78,handle="_aninya";
+  const fsz=parseFloat(ctx.font.match(/(\d+(?:\.\d+)?)px/)[1]),gap=fsz*.55,g=fsz*.78,handle="aninyag";
   const t1=ANINYA+"  \u00b7",w1=ctx.measureText(t1).width;
   const f0=ctx.font;ctx.font=f0.replace("italic ","");const wh=ctx.measureText(handle).width;ctx.font=f0;
   const total=w1+gap+g+fsz*.3+wh;let x0=align==="center"?x-total/2:align==="right"?x-total:x;
@@ -673,7 +1020,7 @@ function captionCanvas(style,comp){
     x.globalAlpha=.35;x.drawImage(paper,0,ph,pw,bh,0,ph,pw,bh);x.globalAlpha=1;
     x.fillStyle=rgba(mixc(leaf,[255,255,255],.25),1);x.fillRect(0,ph,pw,Math.max(3,pw*.004));
     const m=pw*.06;
-    let fs=fitFont(x,L.name,"italic",Math.round(pw*.056),F_DISP,pw*.55);x.textAlign="left";x.fillStyle=rgba(deep,1);
+    let fs=fitFont(x,L.name,"italic",Math.round(pw*.056),F_DISP,pw*.44);x.textAlign="left";x.fillStyle=rgba(deep,1);
     x.fillText(L.name,m,ph+bh*.47);
     fitFont(x,L.latin,"italic",Math.round(pw*.024),F_BODY,pw*.5);x.fillStyle=rgba(dark(deep,-.2),.85);x.fillText(L.latin,m,ph+bh*.68);
     x.textAlign="right";x.font=`500 ${Math.round(pw*.016)}px ${F_MONO}`;x.fillStyle=rgba(deep,.85);
@@ -697,8 +1044,10 @@ function captionCanvas(style,comp){
 }
 async function showFinal(my){
   const comp=window.__lastComp;if(!comp)return;
-  const style=$("caption").value;
-  const out=style==="none"?plateSnap:captionCanvas(style,comp);
+  const isTile=!!comp.frame.tile,style=isTile?"none":$("caption").value;
+  let out=style==="none"?plateSnap:captionCanvas(style,comp);
+  if(isTile&&$("tileRepeat").checked){const c=document.createElement("canvas");c.width=2*W;c.height=2*W;const x=c.getContext("2d");
+    for(let dy=0;dy<2;dy++)for(let dx=0;dx<2;dx++)x.drawImage(plateSnap,dx*W,dy*W);out=c;}
   const cardEl=$("card");cardEl.style.aspectRatio=out.width+" / "+out.height;cardEl.classList.toggle("portrait",out.height>out.width*1.05);
   const b=comp.bird;
   await new Promise(res=>{img.onload=()=>{if(my===token){img.hidden=false;live.hidden=true;}res();};img.onerror=res;img.src=out.toDataURL("image/jpeg",.93);});
@@ -709,17 +1058,38 @@ async function showFinal(my){
 const spSel=$("species"),fSel=$("foliage");
 spSel.innerHTML=`<option value="random">Any bird (random)</option>`+LIB.slice().sort((a,b)=>a.name.localeCompare(b.name)).map(s=>`<option value="${s.id}">${s.name}</option>`).join("");
 fSel.innerHTML=`<option value="match">Match the bird</option>`+Object.entries(PALETTES).map(([k,p])=>`<option value="${k}">${p.name}</option>`).join("");
-const sliders=[["density",v=>v],["leafSize",v=>v+"%"],["curl",v=>v+"%"],["birdSize",v=>v+"%"]];
-function readCfg(){return{caption:$("caption").value,species:spSel.value,foliage:fSel.value,leaf:$("leaf").value,frame:$("frame").value,mirror:$("mirror").checked,
+const sliders=[["density",v=>v],["leafSize",v=>v+"%"],["curl",v=>v+"%"],["wild",v=>v+"%"],["bloom",v=>+v===0?"none":v],["birdSize",v=>v+"%"]];
+function readCfg(){return{plant:$("plant").value,paint:$("paint").value,tileRepeat:$("tileRepeat").checked,caption:$("caption").value,species:spSel.value,foliage:fSel.value,leaf:$("leaf").value,frame:$("frame").value,
+  layout:$("layout").value,symmetry:$("symmetry").value,arrange:$("arrange").value,stems:+$("stems").value,wild:+$("wild").value/100,bloom:+$("bloom").value,
   density:+$("density").value,leafSize:+$("leafSize").value/100,curl:+$("curl").value/100,birdSize:+$("birdSize").value/100};}
-function writeCfg(c){if(c.caption)$("caption").value=c.caption;spSel.value=c.species;fSel.value=c.foliage;$("leaf").value=c.leaf;$("frame").value=c.frame;$("mirror").checked=c.mirror;
+function writeCfg(c){$("plant").value=c.plant||"creeper";$("paint").value=c.paint||"wet";$("tileRepeat").checked=c.tileRepeat!==false;syncPlant();if(c.caption)$("caption").value=c.caption;spSel.value=c.species;fSel.value=c.foliage;$("leaf").value=c.leaf;$("frame").value=c.frame;
+  $("layout").value=c.layout||"tree";$("symmetry").value=c.symmetry||(c.mirror===false?"none":"mirror");$("arrange").value=c.arrange||"alternate";$("stems").value=String(c.stems||1);
+  $("wild").value=Math.round((c.wild??.35)*100);$("bloom").value=c.bloom??3;
   $("density").value=c.density;$("leafSize").value=Math.round(c.leafSize*100);$("curl").value=Math.round(c.curl*100);$("birdSize").value=Math.round(c.birdSize*100);syncOut();}
 function syncOut(){for(const[id,fmt]of sliders)$(id+"Out").textContent=fmt($(id).value);}
 let seed=Math.floor(Math.random()*99999)+1;
 const seedIn=$("seed");
 function go(){seedIn.value=seed;render(readCfg(),seed);}
 let deb=0;
-for(const id of["species","foliage","leaf","frame","mirror"])$(id).addEventListener("change",go);
+for(const id of["species","foliage","leaf","frame","layout","symmetry","arrange","stems"])$(id).addEventListener("change",()=>{syncPlant();go();});
+const PLANT_HINT={glory:"Twining stems with heart-shaped leaves, curling tendrils and open trumpet flowers. Blossoms sets how many flowers.",
+  wisteria:"Arching stems with compound leaves of paired leaflets, and long flower clusters that always hang straight down.",
+  ivy:"Dense, evenly spaced lobed leaves on wiry stems, with the odd cluster of dark berries.",
+  grape:"Big five-lobed leaves, coiling tendrils and hanging bunches of grapes.",
+  arabesque:"Islimi scrollwork: each stem winds into a tightening spiral and ends in a split palmette leaf. Try Four-way symmetry.",
+  kalamkari:"After Indian kalamkari hangings: a thick trunk rising from a scalloped mound, paisley leaves and large rosette flowers. Always mirrored."};
+function syncPlant(){const g=$("plant").value;$("plantHint").hidden=!PLANT_HINT[g];$("plantHint").textContent=PLANT_HINT[g]||"";$("repeatRow").hidden=$("frame").value!=="tile";}
+$("plant").addEventListener("change",()=>{syncPlant();go();});
+$("paint").addEventListener("change",go);
+$("tileRepeat").addEventListener("change",async()=>{if(!window.__lastComp||!live.hidden)return;await fontsReady;showFinal(token);});
+$("shuffleBtn").addEventListener("click",()=>{const r=Math.random,pk=(a,w)=>{let t=r()*w.reduce((x,y)=>x+y,0);for(let i=0;i<a.length;i++){t-=w[i];if(t<=0)return a[i];}return a[0];};
+  $("layout").value=pk(["tree","wreath","climb","corners","cascade"],[3,2.2,1.6,1.4,1.2]);
+  $("symmetry").value=pk(["mirror","none","quad"],[5,3,2]);
+  $("arrange").value=pk(["alternate","opposite","cluster"],[5,2.5,2]);
+  $("stems").value=pk(["1","0.65","1.5"],[5,2,2]);
+  $("wild").value=Math.round((10+r()*60)/5)*5;$("bloom").value=pk([0,1,2,3,4,6],[2,1,1,2,1,1]);
+  $("curl").value=Math.round((50+r()*110)/10)*10;$("density").value=4+Math.floor(r()*5);
+  syncOut();seed=1+Math.floor(r()*99999);go();});
 $("caption").addEventListener("change",async()=>{if(!window.__lastComp||!live.hidden){return;}await fontsReady;showFinal(token);});
 for(const[id]of sliders){$(id).addEventListener("input",()=>{syncOut();clearTimeout(deb);deb=setTimeout(go,300);});}
 $("newBtn").addEventListener("click",()=>{seed=1+Math.floor(Math.random()*99999);go();});
@@ -742,7 +1112,7 @@ $("libGrid").innerHTML=LIB.map(b=>{const c=b.cite;return`<article class="lib-ite
   <p>${c.artist}, <i>${c.title}</i>, ${c.dateDisplay}. Watercolour.</p>
   <p class="num"><a href="${c.objectUrl}" target="_blank" rel="noopener">Rijksmuseum ${c.objectNumber}</a> · Public Domain Mark</p></div></article>`;}).join("");
 $("libGrid").addEventListener("click",e=>{const t=e.target.closest("button.thumb");if(!t)return;spSel.value=t.dataset.id;seed=1+Math.floor(Math.random()*99999);go();$("card").scrollIntoView({behavior:"smooth",block:"start"});});
-syncOut();
+syncOut();syncPlant();
 window.__render=(c,s)=>{writeCfg(Object.assign(readCfg(),c));seed=s;go();};
 go();
 })();
